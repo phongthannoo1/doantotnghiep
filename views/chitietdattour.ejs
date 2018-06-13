@@ -1,0 +1,769 @@
+<% if(typeof message !=="undefined"){ %>
+<script>
+    alert('<%= message %>');
+</script>
+<% } %>
+
+<% if((typeof tour !=="undefined") && (typeof chuyendi !=="undefined")){ %>
+<div class="dattour px-5 mx-3 pb-3">
+	<div class="border-bottom mb-3">
+		<span class="p-1" style="background-color: yellow;color: green;">Thông tin tour</span>
+	</div>
+
+	<div class="row">
+		<div class="col-3">
+			<img style="height: 200px; width: 300px;" src="<%=tour.hinhanh1%>">
+		</div>
+		<div class="col-9">
+			<h3><%=tour.tentour%></h3>
+			<p>Thời gian: <%=tour.ngay%></p>
+			<p>Giá : <%=tour.dongia%>đ</p>
+			<p>Nơi khởi hành: <%=tour.noixp%></p>
+			<p>Ngày khởi hành: <%=chuyendi.ngayxp%></p>
+			<p>Số chỗ còn nhận: <% var connhan=parseInt( chuyendi.soluong, 10 ) - parseInt( chuyendi.dadat, 10 );%><%=connhan%></p>
+		</div>
+	</div>
+
+
+	<div><!-- phát sinh -->
+		<ul style="color: #1E90FF">
+			<li>Các khoản phí phát sinh (nếu có) như: phụ thu dành cho khách nước ngoài, việt kiều; phụ thu phòng đơn; phụ thu chênh lệch giá tour… Nhân viên S VIỆT NAM sẽ gọi điện thoại tư vấn cho quý khách ngay sau khi có phiếu xác nhận booking. (Trong giờ hành chính)</li>
+			<li>Trường hợp quý khách không đồng ý các khoản phát sinh, phiếu xác nhận booking của quý khách sẽ không có hiệu lực.</li>
+		</ul>
+	</div><!-- đóng phát sinh-->
+	<div id="navtab"><!-- navtab -->
+		<ul class="nav nav-tabs navdattour" id="myTab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="chinhsach-tab" data-toggle="tab" href="#chinhsach" role="tab" aria-controls="home" aria-selected="true">CHÍNH SÁCH</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="banggia-tab" data-toggle="tab" href="#banggia" role="tab" aria-controls="profile" aria-selected="false">BẢNG GIÁ TOUR CHI TIẾT</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="lichtrinh-tab" data-toggle="tab" href="#lichtrinh" role="tab" aria-controls="contact" aria-selected="false">LỊCH TRÌNH THAM KHẢO</a>
+		  </li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+		  	<div class="tab-pane fade show active" id="chinhsach" role="tabpanel" aria-labelledby="home-tab" style="max-height: 400px;overflow: auto;border: 1px solid #ccc;padding: 5px;">
+		  		
+
+                    <p style="text-align:justify"><em>Giờ bay có thể thay đổi theo quy định của hàng không. S VIỆT NAM sẽ thay đổi chương trình cho phù hợp với giờ bay mới nhưng sẽ không chịu trách nhiệm về các khoản chi phí phát sinh.</em><br>
+<strong>Giá tour bao gồm:</strong></p>
+
+<ul>
+	<li style="text-align:justify">Vé máy bay khứ hồi TP.HCM – HUẾ/ ĐÀ NẴNG – TP.HCM (Jetstar Pacific)</li>
+	<li style="text-align:justify">Xe tham quan (xe 16 chỗ, 29 chỗ, 35 chỗ, 45 chỗ) tùy theo số lượng khách thực tế trên chuyến đi.</li>
+	<li style="text-align:justify">Khách sạn tiêu chuẩn đầy đủ tiện nghi 2 khách người lớn/ phòng. Nếu lẻ người thứ 3, đóng phụ phí phòng đơn hoặc ngủ ghép phòng 3 khách.
+	<ul>
+		<li>Khách sạn 3 sao tại Huế: Duy Tân, Newstar, Thanh Lịch, …hoặc tương đương.</li>
+		<li>Khách sạn 3 sao tại Quảng Bình: Tân Bình, Luxe, Amanda,….hoặc tương đương.</li>
+		<li>Khách sạn 3 sao tại Đà Nẵng: Tiến Thịnh, Hoàng Sa, Đà Nẵng Port,…hoặc tương đương.</li>
+		<li>Khách sạn 4 sao tại Huế: Century, Cherish, Parkview …hoặc tương đương.</li>
+		<li>Khách sạn 4 sao tại Quảng Bình: Mường Thanh, ….hoặc tương đương.</li>
+		<li>Khách sạn 4 sao tại Đà Nẵng: Sông Hàn, Mường Thanh, Eden,… hoặc tương đương.</li>
+	</ul>
+	</li>
+	<li style="text-align:justify">Ăn uống theo chương trình:
+	<ul>
+		<li>Ăn phụ: 4 bữa buffet sáng tại khách sạn.</li>
+		<li>Ăn chính: 9 bữa chính tiêu chuẩn 100.000 đồng/bữa.</li>
+	</ul>
+	</li>
+	<li style="text-align:justify">Vé tham quan theo chương trình.</li>
+	<li style="text-align:justify">Hướng dẫn viên tiếng Việt vui vẻ nhiệt tình suốt chuyến đi.</li>
+	<li style="text-align:justify">Bảo hiểm với mức bồi thường tối đa 30.000.000 đồng/trường hợp.</li>
+	<li style="text-align:justify">Quà tặng: nón S VIỆT NAM, nước, khăn lạnh.</li>
+</ul>
+
+<p style="text-align:justify"><strong>Không bao gồm:</strong></p>
+
+<ul>
+	<li style="text-align:justify">Bia hay nước ngọt trong các bữa ăn.</li>
+	<li style="text-align:justify">Tham quan ngoài chương trình.</li>
+	<li style="text-align:justify">Chi phí cá nhân: điện thoại, giặt ủi…</li>
+	<li style="text-align:justify">01 bữa ăn trưa ngày thứ 4 trong chương trình.</li>
+	<li style="text-align:justify">Vé cáp treo đi Bà Nà, công viên Châu Á, ca Huế, …</li>
+	<li style="text-align:justify">Chi phí bãi biển: dù, võng, tắm nước ngọt…</li>
+	<li style="text-align:justify">Thuế VAT.</li>
+</ul>
+
+<p style="text-align:justify"><strong>Giá vé dành cho trẻ em:</strong></p>
+
+<ul>
+	<li style="text-align:justify">Trẻ em dưới 02 tuổi: miễn giá tour, giá vé máy bay theo quy định của hãng hàng không, Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé.</li>
+	<li style="text-align:justify">Trẻ em từ 02 – dưới 05 tuổi: 100 % giá vé máy bay; miễn giá tour. Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé. Hai người lớn chỉ kèm 1 trẻ em dưới 5 tuổi, trẻ em thứ 2 trở lên phải mua ½ vé tour.</li>
+	<li style="text-align:justify">Trẻ em từ 05 – dưới 11 tuổi: 100 % giá vé máy bay; 50% giá tour. Bao gồm các dịch vụ ăn uống, ghế ngồi trên xe và ngủ chung với gia đình. Hai người lớn chỉ được kèm 1 trẻ em từ 5 đến dưới 11 tuổi, trẻ em thứ 2 trở lên Cha, Mẹ nên mua thêm 1 suất giường đơn.</li>
+	<li style="text-align:justify">Từ 11 tuổi trở lên: 100% giá tour và tiêu chuẩn như người lớn.</li>
+</ul>
+
+<p style="text-align:justify"><strong>Điều kiện khi đăng ký và hủy vé tour:</strong></p>
+
+<ul>
+	<li style="text-align:justify">Sau khi xác nhận và thanh toán (ít nhất 50% tiền cọc giữ chỗ và thanh toán đủ 100% tổng giá trị tiền tour trước 10 ngày khởi hành).</li>
+	<li style="text-align:justify">&nbsp;Khi đến ngày thanh toán đủ 100% tổng giá trị tiền tour, nếu Quý khách không thanh toán đúng hạn và đúng số tiền được xem như Quý khách tự ý huỷ tour và mất hết số tiền đã đặt cọc giữ chỗ.</li>
+	<li style="text-align:justify">Vé Máy Bay / vé xe lửa / vé tàu cao tốc được xuất ngay sau khi quý khách đóng tiền và có xác nhận sự chính xác về họ, tên (đúng từng ký tự ghi trong hộ chiếu hoặc CMND), ngày-tháng-năm sinh … của hành khách theo yêu cầu của hãng vận chuyển. Mọi sự thay đổi liên quan đến vé đã xuất: ngày giờ đi, tên hành khách, hủy vé, quý khách vui lòng chịu chi phí theo qui định sau:</li>
+	<li style="text-align:justify"><strong>Ngay sau khi Quý khách đăng ký tour nếu hủy sẽ bị phạt tiền tour và vé máy bay:&nbsp; </strong></li>
+	<li style="text-align:justify">Ngay sau khi đặt cọc hoặc thanh toán hoặc trước 15 ngày: phí hủy 10% tiền tour+ 100% Vé máy bay.</li>
+	<li style="text-align:justify">Hủy 10 ngày trước ngày khởi hành: phí hủy 50% tiền tour + 100% vé máy bay.</li>
+	<li style="text-align:justify">Hủy 07 ngày trước ngày khởi hành: phí hủy 70% tiền tour&nbsp; + 100% vé máy bay.</li>
+	<li style="text-align:justify">Hủy&nbsp; 05 ngày trước ngày khởi hành: phí hủy 100% tiền tour&nbsp; + 100% vé máy bay.</li>
+	<li style="text-align:justify">Trường hợp quý khách đến trễ giờ khởi hành được tính là hủy 5 ngày trước ngày khởi hành.</li>
+	<li style="text-align:justify">Do tính chất là đoàn ghép khách lẻ, S VIỆT NAM sẽ có trách nhiệm nhận khách đăng ký cho đủ đoàn (10 khách người lớn trở lên) thì đoàn sẽ khởi hành đúng lịch trình. Nếu số lượng đoàn dưới 10 khách, công ty có trách nhiệm thông báo cho khách trước ngày khởi hành 3 ngày và sẽ thỏa thuận lại ngày khởi hành mới hoặc hoàn trả toàn bộ số tiền đã đặt cọc tour.</li>
+	<li style="text-align:justify">Việc huỷ bỏ chuyến đi phải được thông báo trực tiếp với Công ty hoặc qua fax, email, tin nhắn và phải được Công ty xác nhận. Việc huỷ bỏ bằng điện thoại không được chấp nhận.</li>
+	<li style="text-align:justify">Các ngày đặt cọc, thanh toán, huỷ và dời tour: không tính thứ 7, Chủ Nhật.</li>
+	<li style="text-align:justify">Trong những trường hợp bất khả kháng như: khủng bố, bạo động, thiên tai, lũ lụt… Tuỳ theo tình hình thực tế và sự thuận tiện, an toàn của khách hàng, công ty Du Lịch sẽ chủ động thông báo cho khách hàng sự thay đổi như sau: huỷ hoặc thay thế bằng một chương trình mới với chi phí tương đương chương trình tham quan trước đó. Trong trường hợp chương trình mới có phát sinh thì Khách hàng sẽ thanh toán khoản phát sinh này. Tuy nhiên, mỗi bên có trách nhiệm cố gắng tối đa, giúp đỡ bên bị thiệt hại nhằm giảm thiểu các tổn thất gây ra vì lý do bất khả kháng.…</li>
+	<li style="text-align:justify">Đối với sự thay đổi lịch trình, giờ bay do lỗi của hãng hàng không, tàu hoả, tàu thuỷ, S VIỆT NAM sẽ không chịu trách nhiệm bất kỳ phát sinh nào do lỗi trên như: phát sinh bữa ăn, nhà hàng, khách sạn, phương tiện di chuyển, hướng dẫn viên, ….</li>
+</ul>
+
+<p style="text-align:justify"><strong>Lưu ý:</strong></p>
+
+<ul>
+	<li style="text-align:justify">Khi đăng ký tour khách hàng bắt buộc phải gởi giấy tờ tùy thân cho đơn vị du lịch để vào tên xuất vé và mua bảo hiểm du lịch. Những giấy tờ cá nhân của khách hàng (CMND hoặc Passport) thuộc về trách nhiệm của khách hàng. Mọi vấn đề như hình ảnh, thông tin giấy tờ trong bản gốc bị mờ, không rõ ràng; Passport, CMND hết hạn,… không đúng quy định của pháp luật Việt Nam, S VIỆT NAM sẽ không chịu trách nhiệm và sẽ không hoàn trả bất cứ chi phí phát sinh nào.</li>
+	<li style="text-align:justify">Đối với khách Nước ngoài/Việt Kiều: Khi đi tour phải mang theo đầy đủ Passport (Hộ Chiếu), Visa Việt Nam bản chính còn hạn sử dụng làm thủ tục lên máy bay theo qui định hàng không.&nbsp;</li>
+	<li style="text-align:justify">Trẻ em (dưới 12 tuổi) khi đi du lịch mang theo giấy khai sinh (bản chính hoặc sao y có thị thực còn hạn sử dụng) để&nbsp; làm thủ tục hàng không.</li>
+	<li style="text-align:justify">Quý khách từ 14 tuổi bắt buộc phải có CMND hoặc Passport (còn hạn sử dụng), KHÔNG SỬ DỤNG GIẤY KHAI SINH. Nếu Quý khách từ 14 tuổi chưa có CMND hoặc Passport bắt buộc phải có Giấy xác nhận nhân thân (Có xác nhận chính quyền (còn hạn sử dụng)) + Giấy khai sinh.</li>
+	<li style="text-align:justify">Một số thứ tự, chi tiết trong chương trình; giờ bay; giờ xe lửa; giờ tàu cao tốc có thể thay đổi để phù hợp với tình hình thực tế của chuyến đi (thời tiết, giao thông…)</li>
+	<li style="text-align:justify">Qui định nhận &amp; trả phòng tại các khách sạn/resort: nhận phòng sau 14H00 và trả phòng trước 12H00 .</li>
+	<li style="text-align:justify">Hành lý và tư trang du khách tự bảo quản trong quá trình du lịch .</li>
+	<li style="text-align:justify">Vì lý do sức khỏe và an toàn vệ sinh thực phẩm, Quý Khách vui lòng không mang thực phẩm từ bên ngoài vào nhà hàng, khách sạn. Đối với thức uống khi mang vào phải có sự đồng ý của nhà hàng, khách sạn và bị tính phí nếu có.</li>
+</ul>
+    
+
+
+		  	</div>
+		  	<div class="tab-pane fade" id="banggia" role="tabpanel" aria-labelledby="profile-tab">
+		  		<table class="table">
+                                    <tbody>
+                                        <tr>
+
+                                                <td><span>Loại giá\Độ tuổi</span></td>
+                                                <td>Người lớn(Trên 11 tuổi)</td>
+                                                <td>Trẻ em(2 - 11 tuổi)</td>
+                                                <td>Trẻ nhỏ(2 - 5 tuổi)</td>
+
+                                        </tr>
+
+                                        <tr style="display:none;">
+
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>Giá</span></td>
+                                            <td><span class="mda-money"><% var tiennl=parseInt( tour.dongia, 10 );%><%=tiennl%></span> đ</td>
+                                            <td><span class="mda-money"><% var tienthieunhi=parseInt( tour.dongia, 10 )*80/100;%><%=tienthieunhi.toFixed(0)%></span> đ</td>
+                                            <td><span class="mda-money"><% var tientrenho=parseInt( tour.dongia, 10 )*20/100;%><%=tientrenho.toFixed(0)%></span> đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>Phụ thu Nước Ngoài</span></td>
+                                            <td><span class="mda-money">490,000</span> đ</td>
+                                            <td><span class="mda-money">0</span> đ</td>
+                                            <td><span class="mda-money">0</span> đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>Phụ thu Việt Kiều</span></td>
+                                            <td><span class="mda-money">490,000</span> đ</td>
+                                            <td><span class="mda-money">0</span> đ</td>
+                                            <td><span class="mda-money">0</span> đ</td>
+                                        </tr>
+                                                                                <tr>
+                                            <td><span>Giảm giá</span></td>
+                                            <td>
+ <span class="mda-money">0</span>                                                đ
+                                            </td>
+                                            <td><span class="mda-money">0</span> đ</td>
+                                            <td><span class="mda-money">0</span> đ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+		  	</div>
+		  	<div class="tab-pane fade" id="lichtrinh" role="tabpanel" aria-labelledby="contact-tab">
+		  		<div class="row">
+				      	<div class="col-2">Ngày 1:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay1.indexOf("<br>")%>
+					      	<%= tour.ngay1.substring(0,cs) %><br>
+					      	<%= tour.ngay1.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>
+				    <% if( tour.ngay2 !=="") {%>
+			      	<div class="row">
+				      	<div class="col-2">Ngày 2:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay2.indexOf("<br>")%>
+					      	<%= tour.ngay2.substring(0,cs) %><br>
+					      	<%= tour.ngay2.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>
+				    <% } %>
+				    <% if(tour.ngay3 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 3:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay3.indexOf("<br>")%>
+					      	<%= tour.ngay3.substring(0,cs) %><br>
+					      	<%= tour.ngay3.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( tour.ngay4 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 4:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay4.indexOf("<br>")%>
+					      	<%= tour.ngay4.substring(0,cs) %><br>
+					      	<%= tour.ngay4.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( tour.ngay5 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 5:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay5.indexOf("<br>")%>
+					      	<%= tour.ngay5.substring(0,cs) %><br>
+					      	<%= tour.ngay5.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( tour.ngay6 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 6:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay6.indexOf("<br>")%>
+					      	<%= tour.ngay6.substring(0,cs) %><br>
+					      	<%= tour.ngay6.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( tour.ngay7 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 7:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=tour.ngay7.indexOf("<br>")%>
+					      	<%= tour.ngay7.substring(0,cs) %><br>
+					      	<%= tour.ngay7.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+		  	</div>
+		</div><!-- đóng tabcontent -->
+	</div><!-- dong navtab -->
+
+
+	<div class="border-bottom my-4">
+		<span class="p-1" style="background-color: yellow;color: green;">Thông Tin Liên hệ</span>
+	</div>
+	<form action="http://localhost:3002/dattour/<%=tour.matour%>" method="post" id="formpost">
+		<div class="row">
+			<input type="hidden" class="form-control" id="mahoadon" aria-describedby="hotenkhachchinh" placeholder="" name="mahoadon">	
+			<script>
+				$(document).ready(function(){
+					var today = new Date();
+				    var ss = today.getSeconds();
+				    if(ss<10){ss='0'+ss;}
+				    var mimi = today.getMinutes();
+				    if(mimi<10){mimi='0'+mimi;}
+				    var hh = today.getHours();
+				    if(hh<10){hh='0'+hh;}
+				    var dd = today.getDate();
+				    if(dd<10){dd='0'+dd;}
+				    var mm = today.getMonth()+1; //January is 0!
+				    if(mm<10){mm='0'+mm;}
+				    var yyyy = today.getFullYear();
+				    
+				    today = yyyy+''+mm+''+dd+hh+mimi+ss;
+				    
+				    $("#mahoadon").val(today);				    
+				});
+			</script>
+			<input type="hidden" class="form-control" id="idchuyen" aria-describedby="hotenkhachchinh" placeholder="" name="idchuyen" value="<%=chuyendi.idchuyen%>">	
+			<div class="form-group col-4">
+			    <label for="hotenkhachchinh">HỌ TÊN*:</label>
+			    <input type="text" class="form-control valid" id="hotenkhachchinh" aria-describedby="hotenkhachchinh" placeholder="" name="hotenkhachchinh">	    
+			</div>
+			<input type="hidden" class="form-control" id="soluongkhach" aria-describedby="hotenkhachchinh" placeholder="" name="soluongkhach">	
+			<input type="hidden" class="form-control" id="dadatkhach" aria-describedby="" placeholder="" name="dadatkhach">
+			<div class="form-group col-4">
+			    <label for="emailkhachchinh">Email*:</label>
+			    <input type="text" class="form-control valid" id="emailkhachchinh" aria-describedby="emailkhachchinh" placeholder="" name="emailkhachchinh">	    
+			</div>
+			<div class="form-group col-4">
+			    <label for="dienthoai">Số điện thoại*:</label>
+			    <input type="text" class="form-control valid" id="dienthoai" aria-describedby="dienthoai" placeholder="" name="dienthoai">	    
+			</div>
+			<div class="form-group col-4">
+			    <label for="diachikhachchinh">Địa Chỉ*:</label>
+			    <input type="text" class="form-control valid" id="diachikhachchinh" aria-describedby="diachikhachchinh" placeholder="" name="diachikhachchinh">	    
+			</div>
+			<div class="form-group col-8">
+			    <label for="ghichu">Ghi chú:</label>
+			    <input type="text" class="form-control" id="ghichu" aria-describedby="ghichu" placeholder="" name="ghichu">	    
+			</div>
+
+			<div class="form-group col-3">
+		          <label for="nguoilon">Người lớn:</label>
+		          <input type="number" class="form-control valid tour-quantity1 q-adult1" id="nguoilon" aria-describedby="nguoilon" placeholder="" name="nguoilon">     
+		      </div>
+		      <div class="form-group col-3">
+		          <label for="thieunhi">Thiếu nhi(5-12 tuổi):</label>
+		          <input type="number" class="form-control tour-quantity1 q-child1" id="thieunhi" aria-describedby="thieunhi placeholder="" name="thieunhi">      
+		      </div>
+		      <div class="form-group col-3">
+		          <label for="trenho">Trẻ nhỏ(dưới 2 tuổi):</label>
+		          <input type="number" class="form-control tour-quantity1 q-infant1" id="trenho" aria-describedby="trenho" placeholder="" name="trenho">     
+		      </div>
+		</div><!-- dong row form  -->
+	<div class="border-bottom my-4">
+		<span class="p-1" style="background-color: yellow;color: green;">Thông Tin Khách đi tour</span>
+
+		<table class="table table-bordered table-sm">
+		  <thead class="thead-light">
+		    <tr>
+		      <th scope="col">Họ tên</th>
+		      <th scope="col">Ngày sinh</th>
+		      <th scope="col">Giới tính</th>
+		      <th scope="col">Địa chỉ</th>
+		      <th scope="col">Loại khách</th>
+		      <th scope="col">Quốc tịch</th>
+		      <th scope="col">Đơn giá</th>
+		    </tr>
+		  </thead>
+		  <tbody id="customer-infos">
+        <tr id="tr-nguoilon">
+          <th><input type="text" class="form-control " id="hoten" aria-describedby="hoten" placeholder="" name="hoten"></th>
+          <td>
+            <input type="text" class="form-control date" id="ngaysinh" aria-describedby="ngaysinh" name="ngaysinh">
+          </td>
+          <td>
+            <select class="form-control" id="gioitinh" name="gioitinh">
+            <option value="nam">Nam</option>
+            <option value="nu">Nữ</option>
+          </select>
+        </td>
+          <td><input type="text" class="form-control" id=diachi" aria-describedby="diachi" placeholder="" name="diachi"></td>
+          <td>
+            <select class="form-control" id="loaikhach" name="loaikhach">
+            <option value="nguoilon">Người lớn</option>
+          </select>
+        </td>
+          <td>
+            <select class="form-control" id="quoctich" name="quoctich">
+            <option value="vietnam">Việt Nam</option>
+            <option value="vietkieu">Việt kiều</option>
+            <option value="nuocngoai">Nước Ngoài</option>
+          </select>
+          </td>
+          <td>
+            <span><%=tiennl.toFixed(0)%>Đ</span>
+          </td>
+        </tr>
+        <tr id="tr-thieunhi">
+          <th><input type="text" class="form-control hoten" id="hoten" aria-describedby="hoten" placeholder="" name="hoten"></th>
+          <td>
+            <input type="text" class="form-control date" id="ngaysinh" aria-describedby="ngaysinh" name="ngaysinh">
+          </td>
+          <td>
+            <select class="form-control" id="gioitinh" name="gioitinh">
+            <option value="nam">Nam</option>
+            <option value="nu">Nữ</option>
+          </select>
+        </td>
+          <td><input type="text" class="form-control" id="diachi" aria-describedby="diachi" placeholder="" name="diachi"></td>
+          <td>
+            <select class="form-control" id="loaikhach" name="loaikhach">
+            <option value="thieunhi">Thiếu nhi</option>
+          </select>
+        </td>
+          <td>
+            <select class="form-control" id="quoctich" name="quoctich">
+            <option value="vietnam">Việt Nam</option>
+            <option value="vietkieu">Việt kiều</option>
+            <option value="nuocngoai">Nước Ngoài</option>
+          </select>
+          </td>
+          <td>
+            <span><%=tienthieunhi.toFixed(0)%>Đ </span>
+          </td>
+        </tr>
+        <tr id="tr-trenho">
+          <th><input type="text" class="form-control" id="hoten" aria-describedby="hoten" placeholder="" name="hoten"></th>
+          <td>
+            <input type="text" class="form-control date" id="ngaysinh" aria-describedby="ngaysinh" name="ngaysinh">
+          </td>
+          <td>
+            <select class="form-control" id="gioitinh" name="gioitinh">
+            <option value="nam">Nam</option>
+            <option value="nu">Nữ</option>
+          </select>
+        </td>
+          <td><input type="text" class="form-control" id="diachi" aria-describedby="diachi" placeholder="" name="diachi"></td>
+          <td>
+            <select class="form-control" id="loaikhach" name="loaikhach">
+            <option value="trenho">Trẻ nhỏ</option>
+          </select>
+        </td>
+          <td>
+            <select class="form-control" id="quoctich" name="quoctich">
+            <option value="vietnam">Việt Nam</option>
+            <option value="vietkieu">Việt kiều</option>
+            <option value="nuocngoai">Nước Ngoài</option>
+          </select>
+          </td>
+          <td>
+            <span><%=tientrenho.toFixed(0)%>Đ</span>
+          </td>
+        </tr>
+      </tbody>
+		  <thead class="thead-light">
+		    <tr>
+		      <th scope="col" colspan="4"></th>
+		      <th scope="col" colspan="2">Tổng tiền</th>
+		      <th scope="col" colspan="1">
+		      <input type="hidden" class="form-control-plaintext gia" id="tongtien" aria-describedby="dongia" placeholder="" name="tongtien" value="" readonly>
+		      <span id="spantongtien"></span>
+		      </th>
+		    </tr>
+		  </thead>		  
+		</table>
+	</div><!-- dong thong tin khach di tour -->
+	<div class="border-bottom my-4">
+		<span class="p-1" style="background-color: yellow;color: green;">Hình thức thanh toán</span>
+	</div>
+
+
+<!--ĐIỀU KHOẢN THANH TOÁN-->
+	<div class="mda-provision">
+        <h3>Điều khoản thanh toán</h3>
+        <div style="height: 150px; width: 760px; width: auto; overflow: auto; border: 1px solid #ccc;">
+            <h4 style="text-align:justify">I) CÁC HÌNH THỨC THANH TOÁN TẠI S VIỆT NAM</h4>
+
+			<p style="text-align:justify"><strong>1, Thanh toán bằng tiền mặt:</strong></p>
+
+			<p style="text-align:justify">Quý khách vui lòng đến tại trụ sở văn phòng chính của S VIỆT NAM, các chi nhánh và hệ thống đại lý của S VIỆT NAM để tiến hành thanh toán.</p>
+
+			<p style="text-align:justify"><strong>2, Hình thức chuyển khoản ngân hàng:</strong></p>
+
+			<p style="text-align:justify">Tên tài khoản: CÔNG TY CỔ PHẦN TRUYỀN THÔNG S VIỆT NAM</p>
+
+			<p style="text-align:justify">Ngân hàng: TECHCOMBANK – CHI NHÁNH THẮNG LỢI, TPHCM</p>
+
+			<p style="text-align:justify">Tài khoản: VNĐ: 11920662652011</p>
+
+			<p style="text-align:justify">Quý khách vui lòng liên hệ với <span style="color:#FF0000"><strong>HOTLINE:&nbsp;Âu - Úc - Mỹ: 0938.30.44.88 | Châu Á: 0938.346.588 | Trong nước: 0909.189.888 &nbsp;để được hỗ trợ, tư vấn chi tiết </strong></span>về hình thức thanh toán chuyển khoản.</p>
+
+			<p style="text-align:justify">Khi thực hiện việc chuyển khoản, quý khách vui lòng ghi rõ họ tên, địa chỉ, điện thoại và nội dung chuyến du lịch cụ thể đã được quý khách chọn đăng ký.<br>
+			Sau khi thực hiện việc chuyển khoản, quý khách vui lòng Fax Ủy Nhiệm Chi về công ty và liện hệ nhân viên phụ trách tuyến để nhận được vé du lịch chính thức từ công ty S VIỆT NAM.</p>
+
+			<p style="text-align:justify">S VIỆT NAM sẽ không giải quyết các trường hợp hệ thống tự động hủy phiếu đăng ký nếu quý khách không thực hiện đúng những quy định trên.</p>
+
+			<p style="text-align:justify"><strong>3, Thanh toán trực tuyến qua cồng ONEPAY:</strong></p>
+
+			<p style="text-align:justify">Khi thanh toán, Quý khách vui lòng cung cấp đầy đủ thông tin và đóng một khoản tiền cọc để giữ chỗ. Số tiền cọc khác nhau tùy theo chương trình/ dịch vụ mà Quý khách chọn, số tiền còn lại sẽ thanh toán trước ngày khởi hành 5 ngày làm việc và được nhân viên phụ trách của S VIỆT NAM liên hệ tư vấn trực tiếp rõ ràng cho quý khách sau khi thực hiện giao dịch thanh toán.<br>
+			<u><strong>Lưu ý:</strong></u> Quý khách hàng sẽ thanh toán số tiền cọc tour/ dịch vụ + phí giao dịch (tùy thuộc vào cổng thanh toán nội địa hay quốc tế mà quý khách lựa chọn).</p>
+
+			<p style="text-align:justify"><strong>3.1, Thẻ ngân hàng nội địa ATM/ Internet Banking thông qua cổng ONEPAY</strong></p>
+
+			<ul>
+				<li>Quý khách có thể thanh toán trực tuyến bằng thẻ nội địa, Bao gồm các loại thẻ ghi nợ nội địa mang thương hiệu của các ngân hàng Việt Nam.</li>
+				<li>S VIỆT NAM cam kết không lưu giữ bất kỳ thông tin nào về thẻ của quý khách hàng tại hệ thống của S VIỆT NAM. Vì vậy, quý khách có thể hoàn toàn an tâm khi sử dụng các loại thẻ thanh toán tại website của công ty S VIỆT NAM.</li>
+			</ul>
+
+			<p style="text-align:justify"><em><strong>Lưu ý:</strong> Đối với hình thức thanh toán bằng thẻ ATM/ INTERNETBANKING quý khách vui lòng đăng ký dịch vụ Internet Banking với ngân hàng phát hành thẻ trước khi sử dụng hình thức thanh toán này.</em></p>
+
+			<p style="text-align:justify"><strong>3.2, Thanh toán thẻ quốc tế VISA/ MASTER CARD/ JCB/ AMEX/ AMERICAN EXPRES.. thông qua cổng ONEPAY</strong></p>
+
+			<ul>
+				<li>Tất cả các giao dịch của quý khách tại hệ thống S VIỆT NAM đều được xử lý bằng giao thức bảo mật SSL của Master Card.</li>
+				<li>S VIỆT NAM cam kết không lưu giữ bất kỳ thông tin nào về thẻ của quý khách hàng tại hệ thống của S VIỆT NAM. Vì vậy, quý khách có thể hoàn toàn an tâm khi sử dụng các loại thẻ thanh toán tại website của công ty S VIỆT NAM.</li>
+				<li>Hiện tại hệ thống website <a href="http://www.dulichviet.com.vn">www.dulichviet.com.vn</a> chấp nhận thanh toán bằng các loại thể quốc tế sau: <strong>VISA, MASTER CARD, JCB, AMERICAN EXPRESS, AMEX…</strong></li>
+			</ul>
+
+			<h4 style="text-align:justify">II) ĐIỀU KHOẢN BẮT BUỘC KHI THANH TOÁN ONLINE</h4>
+
+			<p style="text-align:justify"><strong>Đối với các dịch vụ vé máy bay và khách sạn quý khách đặt và thanh toán Online, S VIỆT NAM sẽ không chịu trách nhiệm hoàn, hủy, đổi trả hành trình (phòng). Quý khách <em>không tới khách sạn của bạn đặt sẽ được coi là không nhận phòng và không được hoàn tiền đặt phòng đã thu</em> (Chính sách khách sạn).&nbsp;</strong></p>
+
+			<p style="text-align:justify"><strong>1, ĐIỀU KHOẢN CHUNG</strong></p>
+
+			<ul>
+				<li>Giá tất cả các dịch vụ được tính theo đơn vị Việt Nam Đồng (Việt Nam – VNĐ). Giá dịch vụ trong tour được liệt kê một cách rõ ràng trong phần “Bao gồm” trong các tour du lịch, dịch vụ xe, khách sạn,… S VIỆT NAM không có nghĩa vụ thanh toán bất cứ chi phí nào không nằm trong phần “Bao gồm”.</li>
+				<li>Trường hợp khách thanh toán bằng USD sẽ được quy đổi ra VNĐ theo tỉ giá của ngân hàng Ngân hàng thương mại cổ phần Ngoại thương Việt Nam &nbsp;tại thời điểm thanh toán.</li>
+			</ul>
+
+			<p style="text-align:justify"><strong>2, THANH TOÁN</strong></p>
+
+			<p style="text-align:justify">Khi thanh toán&nbsp;quý khách vui lòng cung cấp đầy đủ thông tin và đóng một khoản tiền cọc để giữ chỗ. Số tiền cọc khác nhau tùy theo chương trình mà quý khách tùy chọn, số tiền còn lại sẽ thanh toán trước ngày khởi hành là 5 ngày làm việc.</p>
+
+			<p style="text-align:justify">Việc thanh toán xem là hoàn tất khi S VIỆT NAM nhận được đủ tiền vé trước ngày khởi hành hoặc theo hợp đồng thỏa thuận giữa 2 bên. Bất kỳ việc thanh toán chậm trễ dẫn đến việc hủy dịch vụ không thuộc trách nhiệm của S VIỆT NAM.</p>
+
+			<p style="text-align:justify">Với hình thức thanh toán chuyển khoản:</p>
+
+			<ul>
+				<li>Khi thực hiện việc chuyển khoản, quý khách vui lòng ghi rõ họ tên, địa chỉ, điện thoại và nội dung chuyến du lịch cụ thể đã được quý khách chọn đăng ký.</li>
+				<li>Sau khi thực hiện việc chuyển khoản, quý khách vui lòng Fax Ủy Nhiệm Chi về công ty và liện hệ nhân viên phụ trách tuyến để nhận được vé du lịch chính thức từ công ty S VIỆT NAM.</li>
+			</ul>
+
+			<p style="text-align:justify">S VIỆT NAM sẽ không giải quyết các trường hợp hệ thống tự động hủy phiếu đăng ký nếu quý khách không thực hiện đúng những quy định trên.</p>
+
+			<p style="text-align:justify"><strong>Lưu ý:</strong> Quý khách vui lòng điền đầy đủ thông tin theo yêu cầu khi đăng ký tour qua website <strong>www.dulichviet.com.vn</strong> và chịu trách nhiệm về tính chính xác của những thông tin đã cung cấp. S VIỆT NAM sẽ sử dụng những thông tin này để cung cấp cho các nhà cung cấp dịch vụ và tiến hành các thủ tục cần thiết cho chuyến đi. Nếu có sự khác biệt giữa thông tin mà Quý khách cung cấp so với thực tế dẫn đến việc phải điều chỉnh thì Quý khách vui lòng thanh toán các khoản chi phí phát sinh (nếu có).</p>
+
+			<p style="text-align:justify"><strong>III) HỦY VÉ VÀ PHÍ HỦY VÉ DU LỊCH</strong></p>
+
+			<ol>
+				<li style="text-align:justify">Trường hợp bị bủy bỏ do S VIỆT NAM:</li>
+			</ol>
+
+			<p style="text-align:justify">Nếu S VIỆT NAM không thực hiện được chuyến du lịch, S VIỆT NAM phải báo ngay cho khách hàng biết và thanh toán lại cho khách hàng toàn bộ số tiền mà khách hàng đã đóng trong vòng 3 ngày kể từ lúc việc thông báo hủy chuyến đi du lịch bằng tiền mặt hoặc chuyển khoản.</p>
+
+			<ol start="2">
+				<li style="text-align:justify">Trường hợp bị hủy vé do khách hàng:</li>
+			</ol>
+
+			<p>Đối với ngày thường:</p>
+
+			<ul>
+				<li style="text-align:justify">Huỷ trước 30 – 45 ngày : 10% tổng giá thành tour.</li>
+				<li style="text-align:justify">Huỷ trước 20 – 30ngày : 20% tổng giá thành tour</li>
+				<li style="text-align:justify">Huỷ trước 25 ngày : 25% tổng giá thành tour</li>
+				<li>Huỷ trước 15 ngày : 30% tổng giá thành tour</li>
+				<li style="text-align:justify">Huỷ trước 07 ngày : 40% tổng giá thành tour</li>
+				<li>Huỷ trước 03 – 06 ngày : 75% tổng giá thành tour.</li>
+			</ul>
+
+			<p style="text-align:justify">Sau thời gian trên : 100% tổng giá thành tour. Việc huỷ bỏ chuyến đi phải được thông báo trực tiếp với Công ty hoặc qua fax, email và phải được Công ty xác nhận. Việc huỷ bỏ bằng điện thoại sẽ không được chấp nhận.</p>
+
+			<p style="text-align:justify"><strong>Lưu ý:</strong></p>
+
+			<p style="text-align:justify">– Trường hợp hủy tour do sự cố khách quan như: thiên tai, khủng bổ, dịch bệnh,… S VIỆT NAM sẽ không chịu trách nhiệm bồi thường thêm bất kỳ chi phí nào ngoài việc hoàn trả tiền tour,</p>
+
+			<p style="text-align:justify">– Trên đây là mức phạy hủy tối đa, chi phí này có thể được giảm tùy theo điều kiện của từng nhà cung cấp dịch vụ cho S VIỆT NAM.</p>
+
+			<p style="text-align:justify">– Thời gian hủy chuyến du lịch được tính theo ngày làm việc (không tính thứ 7, chủ nhật và các ngày lễ).</p>
+
+			<p style="text-align:justify">– Do tính phức tạp của việc xin visa nên các điều kiện hủy vé du lịch trên đây không áp dụng với các chương trình đi Châu Âu, Úc, Mỹ, Nga, Nhật Bản, Hàn Quốc, Ai Cập, Nam Phi, các chương trình này sẽ có các điều kiện hủy vé du lịch riêng.</p>
+
+			<p style="text-align:justify">– Các điều kiện hủy vé như trên <strong>không áp dụng vào dịp Lễ, Tết.</strong></p>
+
+			<ol start="3">
+				<li style="text-align:justify">Trường hợp bất khả kháng:</li>
+			</ol>
+
+			<p style="text-align:justify">Nếu chương trình du lịch bị hủy bỏ hoặc thay đổi bởi một trong hai bên vì một lý do bất khả kháng (chiến tranh, thiên tai, khủng bố…), thì hai bên sẽ không chịu bất kỳ nghĩa vụ bồi hoàn các tổn thất đã xảy ra và không chịu bất trách nhiệm nhiệm pháp lý nào. Tuy nhiên mỗi bên có trách nhiệm cố gắng tối đa để giúp đỡ bên bị thiệt hại nhằm giảm thiểu các tổn thất gây ra vì lý do bất khả kháng.</p>
+
+			<p style="text-align:justify"><strong>DÀNH CHO KHÁCH HÀNG THANH TOÁN TRỰC TUYẾN TRÊN TRANG DULICHVIET.COM.VN</strong></p>
+
+			<ul>
+				<li style="text-align:justify">Khách hàng hủy vé du lịch (tour du lịch) trong thời điểm ngày Thường và Lễ Tết theo đúng những qui định trên, trong trường hợp khách thanh toán trực tuyến, nếu hủy Vé du lịch khách hàng sẽ chịu toàn bộ phí ngân hàng cho việc thanh toán tiền vé du lịch.</li>
+				<li style="text-align:justify">Việc hoàn trả tiền cho khách sẽ được S VIỆT NAM thực hiện ngay sau khi ngân hàng thông báo tiền đã vào tài khoản của S VIỆT NAM</li>
+			</ul>
+			<strong>IV, GIÁ DÀNH CHO TRẺ EM</strong>
+
+			<ul>
+				<li>Trẻ em dưới 2 tuổi : Mua 30% trên giá vé du lịch.</li>
+				<li>Trẻ em từ 2-12 tuổi: Mua 75%-100% giá (tùy theo chính sách của hãng hàng không) trên giá vé du lịch.</li>
+			</ul>
+
+			<p style="text-align:justify"><strong>Lưu ý : </strong> Giá vé du lịch chưa bao gồm :</p>
+
+			<ul>
+				<li>Thuế, chế độ ngủ giường riêng.</li>
+				<li>2 người lớn chỉ được đi kèm theo 1 trẻ em.</li>
+				<li>Trong trường hợp có 2 trẻ em thì thì trẻ em thứ 2 bắt buộc thu bằng giá người lớn để lấy thêm giường.</li>
+			</ul>
+
+			<p style="text-align:justify"><strong>V, NHỮNG YÊU CẦU ĐẶC BIỆT TRONG CHUYẾN DU LỊCH</strong></p>
+
+			<p style="text-align:justify">Các yêu cầu đặc biệt của quý khách phải báo trước cho S VIỆT NAM ngay tại thời điểm đăng ký, S VIỆT NAM sẽ cố gắng đáp ứng những yêu cầu này trong khả năng của mình song sẽ không chịu trách nhiệm về bất kỳ sự từ chối cung cấp dịch vụ từ phía các nhà vận chuyển, khách sạn, nhà hàng và các nhà cung cấp dịch vụ độc lập khách.</p>
+
+			<p style="text-align:justify"><strong>VI, KHÁCH SẠN</strong></p>
+
+			<p style="text-align:justify">Khách sạn được cung cấp trên cơ sở những phòng có 2 giường đơn (TWIN) hoặc một giường đôi (DBL) tùy theo cơ cấu phòng của các khách sạn. Phòng 3 sẽ được bố trí khi cần thiết (TRIPLE). Khách sạn do S VIỆT NAM đặt cho các chương trình tham quan có tiêu chuẩn tương ứng với các mức giá vé mà khách sạn chọn khi đăng ký tour du lịch. Nếu cần thiết thay đổi về bất kỳ lý do nào, khách sạn thay thế sẽ tương đương với tiêu chuẩn của khách sạn ban đầu và sẽ được báo ngày cho du khách trước ngày khởi hành. Những yêu cầu đặc biệt của khách hàng nếu thông báo trước cho S VIỆT NAM sẽ được đáp ứng tùy theo khả năng cung cấp của khách sạn và khách hàng phải trả thêm tiền đối với các yêu cầu này (nếu có). S VIỆT NAM có quyền không đáp ứng những yêu cầu này nếu khách sạn từ chối cung cấp dịch vụ.</p>
+
+			<p style="text-align:justify"><strong>VII, VẬN CHUYỂN</strong></p>
+
+			<p style="text-align:justify">Phương tiện vận chuyển tùy theo từng chương trình du lịch.</p>
+
+			<p style="text-align:justify">Với chương trình đi bằng xe: Xe máy lạnh (4-7-15-25-35-45 chỗ) sẽ được S VIỆT NAM sắp xếp tùy theo số lượng từng đoàn, phục vụ suốt chương trình tham quan.</p>
+
+			<p style="text-align:justify">Với chương trình đi bằng xe lửa, máy bay, tàu cánh ngầm (phương tiện vận chuyển công cộng), trong một số chương trình các nhà cung cấp dịch vụ có thể thay đổi giời khởi hành mà không báo trước, việc thay đổi này sẽ được S VIỆT NAM thông báo cho khách hàng nếu thời gian cho phép.</p>
+
+			<p style="text-align:justify">S VIỆT NAM không chịu trách nhiệm bồi hoàn và trách nhiệm pháp lý với những thiệt hại về vật chất lẫn tinh thần do việc chậm trễ giờ giấc khởi hành của các phương tiện vận chuyển công cộng hoặc sự chậm trễ do chính hành khách gây ra. S VIỆT NAM chỉ thực hiện hành vi giúp đỡ để giảm bớt tổn thất cho khách hàng.</p>
+			<strong>VIII, HÀNH LÝ</strong>
+
+			<p style="text-align:justify">Hành lý gọn nhẹ, với các chương trình sử dụng dịch vụ hàng không hành lý miễn cước sẽ do các hãng hàng không qui định.</p>
+
+			<p style="text-align:justify">S VIỆT NAM không chịu trách nhiệm về sự thất lạc, hư hỏng hành lý hoặc bất kỳ vật dụng nào của hành khách trong suốt chuyến đi, du khách tự bảo quản hành lý của mình. Nếu khách hàng mất hay thất lạc hành lý thì S VIỆT NAM sẽ giúp hành khách liên lạc và khai báo với các bộ phận liên quan để truy tìm hành lý bị mất hay thất lạc. Việc bồi thường hành lý mất hay thất lạc sẽ theo qui định của các đơn vị cung cấp dịch vụ hoặc các đơn vị bảo hiểm.</p>
+
+			<p style="text-align:justify"><strong>IX, TIẾP NHẬN THÔNG TIN VỀ CHƯƠNG TRÌNH DU LỊCH</strong></p>
+
+			<p style="text-align:justify">Trước khi đăng ký, khách hàng vui lòng đọc kỹ chương trình, giá vé, bao gồm cũng như không bao gồm trong chương trình. Khách hàng có thể trực tiếp hoặc nhờ người đại diện đến đăng ký đi du lịch và thanh toán tiền vé tại các văn phòng, chi nhánh của S VIỆT NAM. S VIỆT NAM chỉ có trách nhiệm cung cấp thông tin chuyến đi cho khách hàng đến đăng ký trực tiếp hoặc cho người đại diện. S VIỆT NAM không chịu bất cứ trách nhiệm nào trong trường hợp người đại diện không cung cấp lại hoặc cung cấp không chính xác các thông tin của chuyến đi cho khách hàng.</p>
+
+			<p style="text-align:justify"><strong>X, TRÁCH NHIỆM VÀ CÁC CAM KẾT KHÁC.</strong></p>
+
+			<ol>
+				<li style="text-align:justify">Về phía S VIỆT NAM</li>
+			</ol>
+
+			<p style="text-align:justify">– Đảm bảo mọi dịch vụ theo đúng theo chương trình.</p>
+
+			<p style="text-align:justify">– Phổ biến đầy đủ các thông tin cần thiết, các qui định khi đi du lịch trong và ngoài nước trước ngày khởi hành</p>
+
+			<p style="text-align:justify">– Với các chương trình du lịch nước ngoài, S VIỆT NAM không chịu trách nhiệm về các hành khách bị cơ quan hữu quan của nước ngoài từ chối cho nhập cảnh. Mọi phát sinh từ việc từ chối này do khách hàng chi trả bao gồm cả chi phí phạt hủy dịch vụ của các nhà cung cấp.</p>
+
+			<ol start="2">
+				<li style="text-align:justify">Về phía khách hàng:</li>
+			</ol>
+
+			<p style="text-align:justify">– Thanh toán đầy đủ, đúng hạn.</p>
+
+			<p style="text-align:justify">– Trong thời gian đi du lịch, khách hàng phải tuân thủ theo chương trình</p>
+
+			<p style="text-align:justify">– Cung cấp hộ chiếu, hình ảnh và các giấy tờ liên quan đến thủ tục xuất nhập cảnh đầy đủ, đúng hạng theo qui định</p>
+
+			<p style="text-align:justify">– Tuân thủ theo qui định và pháp luật các nước tham quan. S VIỆT NAM không chịu trách nhiệm pháp lý cũng như vật chất trong trường hợp khách hàng vi phạm pháp luật hoặc qui định của nước sở tại. Khách hàng phải chịu trách nhiệm thanh toán tất cả các chi phí phát sinh do việc vi phạm gây ra. S VIỆT NAM chỉ có trách nhiệm giúp đỡ khách hàng trong trường hợp này nhằm giảm thiểu mức thiệt hại cho khách.</p>
+
+			<ol start="3">
+				<li style="text-align:justify">Tùy theo tình hình thực tế, S VIỆT NAM giữ quyền thay đổi lộ trình, sắp xếp lại thứ tự các điểm tham quan hoặc hủy bỏ chuyến đi du lịch bất cứ lúc nào mà S VIỆT NAM thấy cần thiết vì sự thuận tiện hoặc an toàn cho khách hàng.</li>
+				<li style="text-align:justify">Trong quá trình thực hiện, nếu xảy ra tranh chấp sẽ được giải quyết trên cơ sở thương lượng không đạt được kết quả, vụ việc sẽ được đưa ra toàn án theo đúng qui định của pháp luật hiện hành. Mội chi phí liên quan sẽ do bên thua kiện chịu./.</li>
+			</ol>
+
+        </div>
+
+    </div>
+<!-- HẾT ĐIỀU KHOẢN THANH TOÁN-->
+
+
+	<div class="form-group">
+        <label class="radio-inline"><input type="checkbox" id="accept-policy" name="check"><strong> Tôi đã đọc và chấp nhận điều khoản trên</strong></label>
+    </div>
+    
+    <button type="submit" class="btn btn-success float-right">Thanh toán</button>
+    
+	</form>
+</div>
+ <script>
+ $("#formpost").validate({
+		rules:{
+			 hotenkhachchinh: "required",
+			
+		    // compound rule
+		    emailkhachchinh: {
+		      required: true,
+		      email: true
+		    },
+		    dienthoai:"required",
+		    diachikhachchinh:"required",
+		    check:"required"
+		},
+		messages: {
+		    hotenkhachchinh: "Vui lòng nhập họ tên",
+		    emailkhachchinh: {
+		      required: "Vui lòng nhập email",
+		      email: "Your email address must be in the format of name@domain.com"
+		    },
+		    dienthoai:"vui lòng nhập SĐT",
+		    diachikhachchinh:"Vui lòng nhập địa chỉ"
+		}
+	});
+
+
+  $(document).ready(function(){
+
+    
+
+    $("#tr-nguoilon").hide();
+    $("#tr-thieunhi").hide();
+    $("#tr-trenho").hide();
+    if($("#nguoilon").val()<1){$("#nguoilon").val(1);}
+        $("body").on("change", ".tour-quantity1", function (event) {
+          var target = $(event.target);          
+            var nl=($("#nguoilon").val()==="")?0:$("#nguoilon").val();
+            var tn=($("#thieunhi").val()==="")?0:$("#thieunhi").val();
+            var trenho=($("#trenho").val()==="")?0:$("#trenho").val();
+            var totalprice= nl*<%=tiennl.toFixed(0)%> + tn*<%=tienthieunhi.toFixed(0)%> + trenho*<%=tientrenho.toFixed(0)%>;
+        	$("#tongtien").val(totalprice);
+        	var soluongkhach=parseInt(nl)+parseInt(tn)+parseInt(trenho);
+        	$("#soluongkhach").val(soluongkhach);
+        	var dadatkhach = parseInt(<%=chuyendi.dadat%>)+soluongkhach;
+        	$("#dadatkhach").val(dadatkhach);
+        	$("#spantongtien").html(totalprice+"Đ");        	
+            if (target.val() == null || target.val() == "") {
+                target.val(0);
+                if ($(".q-adult1").val() == "0" || $(".q-adult1").val() == null || $(".q-adult1").val() == "") {
+                    $(".q-adult1").val(1);
+                }
+            }
+            var themnl=$('#tr-nguoilon').html();
+            var themthieunhi=$('#tr-thieunhi').html();
+            var themtrenho=$('#tr-trenho').html();
+            var conl = $('.tr-nguoilon').length;
+            var cothieunhi = $('.tr-thieunhi').length;
+            var cotrenho = $('.tr-trenho').length;
+            var trnl='<tr class="tr-nguoilon">'+themnl+'</tr>';
+            var trthieunhi='<tr class="tr-thieunhi">'+themthieunhi+'</tr>';
+            var trtrenho='<tr class="tr-trenho">'+themtrenho+'</tr>';
+            
+        if (parseInt(conl) < parseInt(nl)) {
+            var count = parseInt(nl) - parseInt(conl);
+            for (var i = 0; i < count; i++) {
+                    $("#customer-infos").append(trnl);
+                    conl = $('.tr-nguoilon').length;
+            }
+        } else {
+            var count = parseInt(conl) - parseInt(nl);
+
+            for (var i = 0; i < count; i++) {
+                $(".tr-nguoilon").last().remove();
+                conl = $('.tr-nguoilon').length;
+            }
+        }
+
+        if (parseInt(cothieunhi) < parseInt(tn)) {
+            var count = parseInt(tn) - parseInt(cothieunhi);
+            for (var i = 0; i < count; i++) {
+                    $("#customer-infos").append(trthieunhi);
+                    cothieunhi = $('.tr-thieunhi').length;
+            }
+        } else {
+            var count = parseInt(cothieunhi) - parseInt(tn);
+
+            for (var i = 0; i < count; i++) {
+                $(".tr-thieunhi").last().remove();
+                cothieunhi = $('.tr-thieunhi').length;
+            }
+        }
+
+        if (parseInt(cotrenho) < parseInt(trenho)) {
+            var count = parseInt(trenho) - parseInt(cotrenho);
+            for (var i = 0; i < count; i++) {
+                    $("#customer-infos").append(trtrenho);
+                    cotrenho = $('.tr-trenho').length;
+            }
+        } else {
+            var count = parseInt(cotrenho) - parseInt(trenho);
+
+            for (var i = 0; i < count; i++) {
+                $(".tr-trenho").last().remove();
+                cotrenho = $('.tr-trenho').length;
+            }
+        }
+
+    $(".date").inputmask("99/99/9999",{ "placeholder": "mm/dd/yyyy" });
+        });
+
+  });
+</script>
+<%}%>

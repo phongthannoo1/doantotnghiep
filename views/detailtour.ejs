@@ -1,0 +1,294 @@
+<% if(typeof detail !=="undefined"){ %>
+<div class="row detail-tour px-5 border border-info mx-3 pb-3">
+	<div class="row my-3">
+		<div class="col-md-5">
+			<div class="container-detail">
+			<% if(typeof detail.hinhanh1 !=="undefined") {%>
+			  <div class="mySlides">
+			    <img src="<%=detail.hinhanh1 %>" style="width:100%">
+			  </div>
+			  <% } %>
+			<% if(typeof detail.hinhanh2 !=="undefined") {%>
+			  <div class="mySlides">
+			    <img src="<%=detail.hinhanh2 %>" style="width:100%">
+			  </div>
+			  <% } %>
+			<% if(typeof detail.hinhanh3 !=="undefined") {%>
+			  <div class="mySlides">
+			    <img src="<%=detail.hinhanh3 %>" style="width:100%">
+			  </div>
+			  <% } %>
+			<% if(typeof detail.hinhanh4 !=="undefined") {%> 
+			  <div class="mySlides">
+			    <img src="<%=detail.hinhanh4 %>" style="width:100%">
+			  </div>
+			  <% } %>
+			<% if(typeof detail.hinhanh5 !=="undefined") {%>
+			  <div class="mySlides">
+			    <img src="<%=detail.hinhanh5 %>" style="width:100%">
+			  </div>
+			  <% } %>
+
+			  <div class="mySlides">
+			    <img src="images/monaco(2).jpg" style="width:100%">
+			  </div>
+			  <a class="prev" onclick="plusSlides(-1)">❮</a>
+			  <a class="next" onclick="plusSlides(1)">❯</a>
+
+			  <div class="caption-container">
+			    <p id="caption"></p>
+			  </div>
+
+			  <div class="row-detail">
+			  <% if(typeof detail.hinhanh1 !=="undefined") {%>
+			    <div class="column-detail">
+			      <img class="demo cursor" src="<%=detail.hinhanh1 %>" style="width:100%" onclick="currentSlide(1)">
+			    </div>
+			  <% } %>
+
+			    <% if(typeof detail.hinhanh2 !=="undefined") {%>
+			    <div class="column-detail">
+			      <img class="demo cursor" src="<%=detail.hinhanh2 %>" style="width:100%" onclick="currentSlide(2)" >
+			    </div>
+			  <% } %>
+
+			    <% if(typeof detail.hinhanh3 !=="undefined") {%>
+			    <div class="column-detail">
+			      <img class="demo cursor" src="<%=detail.hinhanh3 %>" style="width:100%" onclick="currentSlide(3)" >
+			    </div>
+			  <% } %>
+
+			    <% if(typeof detail.hinhanh4 !=="undefined") {%>
+			    <div class="column-detail">
+			      <img class="demo cursor" src="<%=detail.hinhanh4 %>" style="width:100%" onclick="currentSlide(4)" >
+			    </div>
+			  <% } %>
+
+			    <% if(typeof detail.hinhanh5 !=="undefined") {%>
+			    <div class="column-detail">
+			      <img class="demo cursor" src="<%=detail.hinhanh5 %>" style="width:100%" onclick="currentSlide(5)">
+			    </div>  
+			  <% } %>
+				<div class="column-detail">
+			      <img class="demo cursor" src="images/monaco(2).jpg" style="width:100%" onclick="currentSlide(6)">
+			    </div>
+			  </div>
+			</div>
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+		</div>
+		<div class="col-md-7">
+			
+				<h2 class=""><%=detail.tentour %></h2> 
+                <p style="font-size: 16px; font-weight: bold; ">Hành trình: <%=detail.hanhtrinh %></p>
+
+                <p class="mda-info-descriptions"><%= detail.mota%></p>
+                <div class="row">
+	                <div class="col-sm-6 pl-3">
+	                	<span>
+	                                Khởi hành: <a href="#"><%= detail.noixp%></a>
+	                            </span>
+	                                                <p>Thời gian: <%= detail.ngay%></p>
+	                        <p>Ngày khởi hành: <%chuyendi.forEach(function(body){ %>
+	                        		<a href="http://localhost:3002/dattour/<%=body.idchuyen%>"><%=body.ngayxp%></a>
+	                        <%});%> </p>
+	                </div>
+	                <div class="col-sm-6">
+	                	<p>
+	                        <span class="mda-r-lb">Giá từ:</span>
+	                        <span class="mda-r-price"><span class="mda-money"><%= detail.dongia%></span>đ</span>
+	                    </p>                               
+	                    <p class="mda-r-book">
+	                    <a href="http://localhost:3002/dattour/<%= chuyendi[0].idchuyen%>" class="btn btn-danger" role="button">Đặt ngay</a>
+	                    </p>
+	                </div>
+                </div><!-- row -->
+		</div><!-- col-md-7 -->
+		
+
+	</div>	<!-- row -->
+
+
+<div class="row my-3">
+		<div class="col-md-8 mx-auto w-100">
+			<ul class="nav nav-tabs" role="tablist">
+			    <li class="nav-item">
+			      <a class="nav-link active" data-toggle="tab" href="#home">Tổng quan</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" data-toggle="tab" href="#menu1">Lịch trình</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" data-toggle="tab" href="#menu2">Lịch khởi hành</a>
+			    </li>
+			  </ul>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content col-12">
+			    <div id="home" class="tab-pane active col-12"><br>
+			      <p class="text-justify"><%=detail.mota%></p>
+			    </div>
+			    <div id="menu1" class="tab-pane fade col-12"><br>
+				    <div class="row col-12">
+				      	<div class="col-2">Ngày 1:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay1.indexOf("<br>")%>
+					      	<%= detail.ngay1.substring(0,cs) %><br>
+					      	<%= detail.ngay1.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>
+				    <% if( detail.ngay2 !=="") {%>
+			      	<div class="row">
+				      	<div class="col-2">Ngày 2:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay2.indexOf("<br>")%>
+					      	<%= detail.ngay2.substring(0,cs) %><br>
+					      	<%= detail.ngay2.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>
+				    <% } %>
+				    <% if( detail.ngay3 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 3:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay3.indexOf("<br>")%>
+					      	<%= detail.ngay3.substring(0,cs) %><br>
+					      	<%= detail.ngay3.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( detail.ngay4 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 4:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay4.indexOf("<br>")%>
+					      	<%= detail.ngay4.substring(0,cs) %><br>
+					      	<%= detail.ngay4.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( detail.ngay5 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 5:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay5.indexOf("<br>")%>
+					      	<%= detail.ngay5.substring(0,cs) %><br>
+					      	<%= detail.ngay5.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( detail.ngay6 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 6:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay6.indexOf("<br>")%>
+					      	<%= detail.ngay6.substring(0,cs) %><br>
+					      	<%= detail.ngay6.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+				    <% if( detail.ngay7 !=="") {%>
+				    <div class="row">
+				      	<div class="col-2">Ngày 7:</div>
+					    <div class="col-10">
+					      	<p class="text-justify">
+					      	<% var cs=detail.ngay7.indexOf("<br>")%>
+					      	<%= detail.ngay7.substring(0,cs) %><br>
+					      	<%= detail.ngay7.slice(cs+4) %>
+					      	</p>
+					    </div>
+				    </div>				    
+				    <% } %>
+			    </div>
+			    <div id="menu2" class="tab-pane fade w-100 col-12"><br>
+			      <h3>Lịch khởi hành</h3>
+			      	<table class="table col-12">
+		              <thead>
+		                <tr>
+		                  <th colspan="2" style="width:100px;">STT</th>
+		                  <th colspan="2" style="width:200px;">Ngày xuất phát</th>
+		                  <th colspan="2" style="width:200px;">Giá</th>
+		                  <th colspan="2" style="width:200px;">Số lượng</th>
+		                  <th colspan="2" style="width:500px;">Book Tour</th>
+		                </tr>
+		              </thead>
+		              <tfoot>
+		                <tr>
+		                  <th colspan="2" style="width:100px;">STT</th>
+		                  <th colspan="2" style="width:200px;">Ngày xuất phát</th>
+		                  <th colspan="2" style="width:200px;">Giá</th>
+		                  <th colspan="2" style="width:200px;">Số lượng</th>
+		                  <th colspan="2" style="width:500px;">Book Tour</th>
+		                </tr>
+		              </tfoot>
+		              <tbody>
+		                <%if(typeof chuyendi !=="undefined"){var i = 0;%>
+		                <%chuyendi.forEach(function(body){i=i+1;%>
+		                <tr>
+		                  <td colspan="2" style="width:100px;"><%=i%></td>
+		                  <td colspan="2" style="width:200px;"><%=body.ngayxp%></td>
+		                  <td colspan="2" style="width:200px;"><%=detail.dongia%></td>
+		                  <td colspan="2" style="width:200px;"><%=body.soluong -body.dadat%></td>
+		                  <td colspan="2" style="width:500px;"><a class="btn btn-danger" href="http://localhost:3002/dattour/<%=body.idchuyen%>">Book</a></td>
+		                </tr>
+		                <%});}%>
+		              </tbody>
+		            </table>
+			    </div>
+			  </div>
+		</div>
+		<div class="col-md-4 border border-info float-right">
+			<div class="mb-5">
+				<div class="border-bottom border-warning mb-5">
+					<h3 class="mda-info-title"> <i class="fa fa-fw fa-car"></i>Tour liên quan</h3>
+				</div><!-- border -->
+				<p style="font-size: 16px; font-weight: bold; ">Không có tour liên quan</p>
+				<p class="mda-info-descriptions">....</p>
+			</div>
+			
+		</div><!-- col-md-4 -->
+		
+
+	</div>	<!-- row -->
+</div><!-- div detail-tour-->
+
+<% } %>

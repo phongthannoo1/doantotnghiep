@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+ <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.min.js'></script>
+
+ <script>
+  $( document ).ready(function() {
+    $('textarea#froala-editor').froalaEditor();
+});
+</script>
+  </head>
+  <body>
+    
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">S-VIETNAM</a>
+        <span class="justify-content-center text-light font-weight-bold">ADMIN PAGE</span>
+        <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+      </nav>
+
+      <div class="container-fluid m-0 p-0">
+        <div class="row">
+
+      <!-- left menu-->
+          <div class="col-md-3 m-0 bg-dark h-100  position-static">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-umbrella mr-3" style="font-size:30px"></i> DANH SÁCH TOUR</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa fa-user-plus mr-3" style="font-size:30px"></i>DANH SÁCH KHÁCH HÀNG</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-align-justify mr-3" style="font-size:30px"></i> <i class="fa fa-umbrella"></i> Messages</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fa fa-align-justify mr-3" style="font-size:30px"></i> <i class="fa fa-umbrella"></i> Settings</a>
+            </div><!-- close nav -->
+          </div><!--close div -->
+          <!-- main-->
+          <div class="col-md-9 col-sm-9 m-0 p-0 bg-light">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Example select</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect2">Example multiple select</label>
+                  <select multiple class="form-control" id="exampleFormControlSelect2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Example textarea</label>
+                  <textarea id="froala-editor">Initialize the Froala WYSIWYG HTML Editor on a textarea.</textarea>
+                </div>
+              </form>
+          </div>
+        </div>
+          
+  </div>
+    

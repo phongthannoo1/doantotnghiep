@@ -1,0 +1,71 @@
+<!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tours</li>
+      </ol>
+      
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Danh sách tour</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Mã tour</th>
+                  <th>Tên tour</th>
+                  <th>Hành trình</th>
+                  <th>Nơi xuất phát</th>
+                  <th>Thời gian</th>
+                  <th>Mô tả</th>
+                  <th>Đơn giá</th>
+                  <th>Mức độ</th>
+                  <th>Loại</th>
+                  <th>Sửa</th>
+                  <th>thêm</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Mã tour</th>
+                  <th>Tên tour</th>
+                  <th>Hành trình</th>
+                  <th>Nơi xuất phát</th>
+                  <th>Thời gian</th>
+                  <th>Mô tả</th>
+                  <th>Đơn giá</th>
+                  <th>Mức độ</th>
+                  <th>Loại</th>                  
+                  <th>Sửa</th>
+                  <th>thêm</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <%if(typeof nn !=="undefined"){%>
+                <%nn.forEach(function(body){%>
+                <tr>
+                  <td><%=body.matour%></td>
+                  <td><%=body.tentour%></td>
+                  <td><%=body.hanhtrinh%></td>
+                  <td><%=body.noixp%></td>
+                  <td><%=body.ngay%></td>
+                  <td><%=body.mota.substring(0,120)%></td>
+                  <td><%=body.dongia%></td>
+                  <td><%=body.mucdo%></td>
+                  <td><%=body.loai%></td>                  
+                  <td><a href="http://localhost:3002/admin/edit/<%=body.matour%>">Sửa</a></td>
+                  <td><a href="http://localhost:3002/admin/themchuyen/<%=body.matour%>">Thêm Chuyến</a></td>
+                </tr>
+                <%});}%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    

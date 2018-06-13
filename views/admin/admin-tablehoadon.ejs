@@ -1,0 +1,81 @@
+<!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Hóa đơn</li>
+      </ol>
+      
+      <!-- Example DataTables Card-->
+      <div class="card mb-3" id="tablehoadon">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Danh sách Hóa đơn</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Mã hóa đơn</th>
+                  <th>ID Chuyến</th>
+                  <th>Tên khách hàng</th>
+                  <th>Sô lượng khách</th>
+                  <th>Danh sách khách</th>
+                  <th>Email</th>
+                  <th>Điện thoại</th>
+                  <th>Địa chỉ</th>
+                  <th>Ghi chú</th>
+                  <th>Thành tiền</th>                  
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Mã hóa đơn</th>
+                  <th>ID Chuyến</th>
+                  <th>Tên khách hàng</th>
+                  <th>Sô lượng khách</th>
+                  <th>Danh sách khách</th>
+                  <th>Email</th>
+                  <th>Điện thoại</th>
+                  <th>Địa chỉ</th>
+                  <th>Ghi chú</th>
+                  <th>Thành tiền</th>  
+                </tr>
+              </tfoot>
+              <tbody>
+                <%if(typeof nn !=="undefined"){%>
+                <%nn.forEach(function(body){%>
+                <tr>
+                  <td><%=body.mahoadon%></td>
+                  <td><%=body.idchuyen%></td>
+                  <td><%=body.tenkh%></td>
+                  <td><%=body.soluongkhach%></td>
+                  <td>
+                  <% for(var a = 3; a< body.danhsachkhach.ten.length;a++){ %>
+                        <%='-'+body.danhsachkhach.ten[a]%><br>
+                  <%}%>
+                  </td>
+                  <td><%=body.email%></td>
+                  <td><%=body.didong%></td>
+                  <td><%=body.diachi%></td>
+                  <td><%=body.ghichu%></td>
+                  <td class="totaltest"><%=body.thanhtien%></td>
+                </tr>
+                <%});}%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <script>
+
+    /*$(document).ready(function(){
+        var sum = 0;
+        $('.totaltest').each(function()
+        {
+            sum += parseFloat($(this).text());
+        });
+    });*/
+  </script>

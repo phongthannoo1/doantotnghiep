@@ -1,0 +1,36 @@
+<% include admin-layout %>
+      <% include admin-tabletour %>
+      <% include admin-uploadchuyendi %>
+      <% include admin-uploadhoadon %>
+      <% include admin-uploadtour %>
+      <button id="nutvang">Get External Content golden</button>
+      <button id="nutbac">Get External Content silver</button>
+      <div id="ajax"></div>
+      <script>
+      $(document).ready(function(){
+   
+//http://localhost:3002/admin/danhsachhoadonajax
+    $("#nutvang").click(function(){
+      $.ajax({
+        url : "http://localhost:3002/admin/danhsachhoadonajax",
+        type : "get",
+        dataType:"text",
+        success : function (result){
+            $('#ajax').html(result);
+        }
+      });
+    });
+
+    $("#nutbac").click(function(){
+      $.ajax({
+        url : "http://localhost:3002/admin/danhsachhoadonajax2",
+        type : "get",
+        dataType:"text",
+        success : function (result){
+            $('#ajax').html(result);
+        }
+      });
+    });
+});
+</script>
+<% include admin-footer %>

@@ -1,0 +1,79 @@
+<% if(typeof message !=="undefined"){ %>
+<script>
+    $.alert({
+    title: 'Alert!',
+    content: '<%= message %>',
+    });
+</script>
+<% } %>
+<!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tours</li>
+      </ol>
+      
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i>Thêm chuyến đi</div>
+        <div class="card-body">
+          <div class="table-responsive p-3">
+            <form action="http://localhost:3002/admin/themchuyen" method="post">
+      	        <div class="form-group row">
+                  <label for="idchuyen" class="col-sm-2 col-form-label">ID chuyến</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="idchuyen" name="idchuyen">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="matour" class="col-sm-2 col-form-label">Mã tour</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="<%if(typeof matour !=="undefined"){%><%=matour%><%}%>" id="matour" name="matour">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngayxp" class="col-sm-2 col-form-label">Ngày xuất phát</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngayxp" name="ngayxp">
+                  </div>
+                </div>
+		            <div class="form-group row">
+                  <label for="soluong" class="col-sm-2 col-form-label">Số lượng người đi</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="number" value="" id="soluong" name="soluong">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="dadat" class="col-sm-2 col-form-label">Đã đặt</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="number" value="0" id="dadat" name="dadat" readonly>
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label for="baogom">Bao gồm</label>
+                  <textarea class="form-control" id="baogom" rows="3" name="baogom"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="khongbaogom">Không bao gồm</label>
+                  <textarea class="form-control" id="khongbaogom" rows="3" name="khongbaogom"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="luuy">Lưu ý</label>
+                  <textarea class="form-control" id="luuy" rows="3" name="luuy"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="dieukien">Điều kiện hủy tour</label>
+                  <textarea class="form-control" id="dieukien" rows="3" name="dieukien"></textarea>
+                </div>                
+          		  <button type="submit" class="btn btn-primary">Thêm chuyến</button>
+
+            </form>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+

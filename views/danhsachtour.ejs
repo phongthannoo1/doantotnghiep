@@ -1,0 +1,135 @@
+<!-- tour di nhieu -->
+
+    <div class="row title-tour pr-3">
+            <div class="col-sm-10">
+                <div class=" border-bottom border-danger">
+                    <img class=" float-left" alt="CHÙM TOUR HOT" src="images/icon_tilte.png">
+                <h3 class="lb">
+ <a href="#">CHÙM TOUR HOT</a> 
+                </h3>
+                </div>
+            </div>
+            <div class="col-sm-2 border-bottom border-success">
+                <a href="#">Xem thêm&gt;&gt;</a>
+            </div>
+    </div>
+
+    <div class="row">
+        <% if(typeof hot !== "undefined") {%>
+        <% hot.forEach(function(body) {%>
+        <div class="col-sm-3">
+            <article class="col-item">
+                <div class="photo">
+                    <a href="http://localhost:3002/<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+                </div>
+                <div class="info">
+                    <div><%= body.tentour.substring(0,35) %></div>
+                    <div class="row">
+                        <div class="price-details col-md-6">
+                            <p><i class="fa fa-clock-o"></i> <%=body.ngay %></p>
+                            <p><i class="fa fa-calendar"></i> Hàng ngày</p>
+                        </div>
+                        <div class="price-details col-md-6">
+                            <span class="price-new"><%=body.dongia %> đ</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <% });
+        }    
+         %>
+        
+    </div>
+
+<!-- tour trong nuoc -->
+
+    <div class="row title-tour pr-3">
+            <div class="col-sm-10">
+                <div class=" border-bottom border-danger">
+                    <img class=" float-left" alt="CHÙM TOUR TRONG NƯỚC" src="images/icon_tilte.png">
+                <h3 class="lb">
+ <a href="http://localhost:3002/danhsachtrongnuoc">TOUR TRONG NƯỚC</a> 
+                </h3>
+                </div>
+            </div>
+            <div class="col-sm-2 border-bottom border-success">
+                <a href="http://localhost:3002/danhsachtrongnuoc">Xem thêm&gt;&gt;</a>
+            </div>
+    </div>
+
+    <div class="row">
+        <% if(typeof tn !== "undefined") {%>
+        <% tn.forEach(function(body) {%>
+        <div class="col-sm-3">
+            <article class="col-item">
+                <div class="photo">                    
+                    <a href="http://localhost:3002/<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+                </div>
+                <div class="info">
+                    <div><%= body.tentour.substring(0,35) %></div>
+                    <div class="row">
+                        <div class="price-details col-md-6">
+                            <p><i class="fa fa-clock-o"></i> <%= body.ngay %></p>
+                            <p><i class="fa fa-calendar"></i> Hàng ngày</p>
+                        </div>
+                        <div class="price-details col-md-6">
+                            <span class="price-new"><%=body.dongia %> đ</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <% });
+        }    
+         %>
+        
+    </div>
+
+<!-- tour Nước ngoài -->
+
+    <div class="row title-tour pr-3">
+            <div class="col-sm-10">
+                <div class=" border-bottom border-danger">
+                    <img class=" float-left" alt="CHÙM TOUR NƯỚC NGOÀI" src="images/icon_tilte.png">
+                <h3 class="lb">
+ <a href="http://localhost:3002/danhsachnuocngoai">TOUR NƯỚC NGOÀI</a> 
+                </h3>
+                </div>
+            </div>
+            <div class="col-sm-2 border-bottom border-success">
+                <a href="http://localhost:3002/danhsachnuocngoai">Xem thêm&gt;&gt;</a>
+            </div>
+    </div>
+
+    <div class="row">
+        <% if(typeof nn !== "undefined") {%>
+        <% nn.forEach(function(body) { %>
+        <div class="col-sm-3">
+            <article class="col-item">
+                <div class="photo">                    
+                    <a href="http://localhost:3002/<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+                </div>
+                <div class="info">
+                    <div><%= body.tentour.substring(0,35) %></div>
+                    <div class="row">
+                        <div class="price-details col-md-6">
+                            <p><i class="fa fa-clock-o"></i> <%= body.ngay %></p>
+                            <p><i class="fa fa-calendar"></i> Hàng ngày</p>
+                        </div>
+                        <div class="price-details col-md-6">
+                            <span class="price-new"><%=body.dongia %> đ</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <% });
+        }    
+         %>
+        
+    </div>
+

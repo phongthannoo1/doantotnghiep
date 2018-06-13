@@ -1,0 +1,107 @@
+<!-- Breadcrumbs-->
+      <div id="response">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Hóa đơn</li>
+      </ol>
+      
+      <!-- Example DataTables Card-->
+      <div class="card mb-3" id="tablehoadonthongke">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Thống kê Hóa đơn theo tháng và doanh thu</div>
+        <div class="card-body">
+        <label>Tháng: <input type="text" id="thang" name="thang">   Mã tour: <input type="text" id="matour" name="matour">   
+        <button id="nutbac" class="btn btn-info">Thống kê</button></label>
+        <label id="labeltongtien"></label>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Mã hóa đơn</th>
+                  <th>ID Chuyến</th>
+                  <th>Tên khách hàng</th>
+                  <th>Sô lượng khách</th>
+                  <th>Danh sách khách</th>
+                  <th>Email</th>
+                  <th>Điện thoại</th>
+                  <th>Địa chỉ</th>
+                  <th>Ghi chú</th>
+                  <th>Thành tiền</th>                  
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Mã hóa đơn</th>
+                  <th>ID Chuyến</th>
+                  <th>Tên khách hàng</th>
+                  <th>Sô lượng khách</th>
+                  <th>Danh sách khách</th>
+                  <th>Email</th>
+                  <th>Điện thoại</th>
+                  <th>Địa chỉ</th>
+                  <th>Ghi chú</th>
+                  <th>Thành tiền</th>  
+                </tr>
+              </tfoot>
+              <tbody>
+                <%if(typeof nn !=="undefined"){%>
+                <%nn.forEach(function(body){%>
+                <tr>
+                  <td><%=body.mahoadon%></td>
+                  <td><%=body.idchuyen%></td>
+                  <td><%=body.tenkh%></td>
+                  <td><%=body.soluongkhach%></td>
+                  <td>
+                  <% for(var a = 3; a< body.danhsachkhach.ten.length;a++){ %>
+                        <%='-'+body.danhsachkhach.ten[a]%><br>
+                  <%}%>
+                  </td>
+                  <td><%=body.email%></td>
+                  <td><%=body.didong%></td>
+                  <td><%=body.diachi%></td>
+                  <td><%=body.ghichu%></td>
+                  <td class="totaltest"><%=body.thanhtien%></td>
+                </tr>
+                <%});}%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+      </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+  <script>
+      $(document).ready(function(){
+
+    $("#nutbac").click(function(){
+      $.ajax({
+        url : "http://localhost:3002/admin/danhsachhoadonthongke",
+        type : "post",
+        dataType:"text",
+        data : {
+             thang : $('#thang').val(),
+             matour : $('#matour').val()
+        },
+        success : function (result){
+            $('#response').html(result);
+        }
+      });
+    });
+});
+</script>
+
+ <script>
+
+    $(document).ready(function(){
+        var sum = 0;
+        $('.totaltest').each(function()
+        {
+            sum += parseFloat($(this).text());
+        });
+        $('#labeltongtien').text("Tổng tiền: "+sum+"Đ");
+    });
+  </script>

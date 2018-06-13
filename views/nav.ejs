@@ -1,0 +1,62 @@
+
+
+<!-- menu 2 -->
+<div class="navbar1 rounded" id="navbar1">
+  <a href="http://localhost:3002/">Home</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+    <button class="dropbtn">Tour trong nước</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn1">Dropdown</button>
+    <div class="dropdown-content1">  
+      <div class="row1">
+        <div class="column1">
+          <h5>Category 1</h5>
+          <a href="http://localhost:3002/timkiem/h%C3%A0%20giang">Du lịch Hà Giang</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column1">
+          <h5>Category 2</h5>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column1">
+          <h5>Category 3</h5>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column1">
+          <h5>Category 4</h5>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar1");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

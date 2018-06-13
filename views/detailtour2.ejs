@@ -1,0 +1,171 @@
+<div class="row detail-tour px-5 border border-info mx-3 pb-3">
+	<div class="row my-3 border border-warning">
+		<div class="col-md-5">
+			<div class="container-detail">
+			  <div class="mySlides">
+			    <img src="" style="width:100%">
+			  </div>
+			  <div class="mySlides">
+			    <img src="" style="width:100%">
+			  </div>
+			  <div class="mySlides">
+			    <img src="" style="width:100%">
+			  </div>
+			  <div class="mySlides">
+			    <img src="" style="width:100%">
+			  </div>
+			  <div class="mySlides">
+			    <img src="" style="width:100%">
+			  </div>
+			  <a class="prev" onclick="plusSlides(-1)">❮</a>
+			  <a class="next" onclick="plusSlides(1)">❯</a>
+
+			  <div class="caption-container">
+			    <p id="caption"></p>
+			  </div>
+
+			  <div class="row-detail">
+			    <div class="column-detail">
+			      <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(1)">
+			    </div>
+
+			    <div class="column-detail">
+			      <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(2)" >
+			    </div>
+
+			    <div class="column-detail">
+			      <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(3)" >
+			    </div>
+
+			    <div class="column-detail">
+			      <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(4)" >
+			    </div>
+
+			    <div class="column-detail">
+			      <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(5)">
+			    </div> 
+
+			  </div>
+			</div>
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+		</div>
+		<div class="col-md-7">
+			<div class="row">
+				<h1 class="mda-info-title"></h1>
+                    <p style="font-size: 16px; font-weight: bold; ">Hành trình:</p>
+
+                <p class="mda-info-descriptions">Du lịch Singapore - Malaysia một hành trình hai quốc gia sẽ đưa bạn đến những điểm thú vị. Hành trình du lịch khám phá hai nước Singapore - Malaysia sẽ đưa các bạn khám phá đến hai nước phát triển hàng đầu Đông Nam Á. Singapore được ví như hòn đảo có hình dạng một viên kim cương bao quanh bởi nhiều đảo nhỏ khác, Malaysia có tòa tháp đôi cao nhất thế giới. Hãy đến với hành trình tour Singapore Malaysia để cảm nhận sự thú vị của hai đất nước xinh đẹp này.</p>
+                <div class="col-sm-6">
+                	<span>
+                                Khởi hành: <a href="https://dulichviet.com.vn/du-lich-ha-noi">Hà Nội</a>
+                            </span>
+                                                <p>Thời gian: 6 ngày 5 đêm</p>
+                        <p>Ngày khởi hành: 10/03; 10,27/04; 22/05; 05,19/06; 03,17,31/07; 14,21, 28/08, 18/09, 23/10, 20/11/2018  </p>
+                        <p>Số lượng: <input name="Number" type="number" min="1" value="1" id="quantity-tour-adult"> </p>
+                </div>
+                <div class="col-sm-6">
+                	<p>
+                                    <span class="mda-r-lb">Giá từ:</span>
+                                    <span class="mda-r-price"><span class="mda-money">12,290,000</span>đ</span>
+                                </p>
+                                <input type="hidden" id="tour-id" value="jTsHWDqrWJU%3d">
+  <p>Còn: 5 chỗ</p>                                   <p>Khởi hành: 05/06/2018 <a class="mda-day-other">Ngày khác</a></p>
+                                    <p class="mda-r-book"><a href="https://dulichviet.com.vn/thanh-toan-tour-du-lich?id=jTsHWDqrWJU%3d">ĐẶT NGAY</a> </p>
+                </div>
+
+			</div><!-- row -->
+		</div><!-- col-md-7 -->
+		
+
+	</div>	<!-- row -->
+
+
+<div class="row my-3 border border-warning">
+		<div class="col-md-8">
+			<ul class="nav nav-tabs" role="tablist">
+			    <li class="nav-item">
+			      <a class="nav-link active" data-toggle="tab" href="#home">Tổng quan</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" data-toggle="tab" href="#menu1">Lịch trình</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" data-toggle="tab" href="#menu2">Lịch khởi hành</a>
+			    </li>
+			  </ul>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+			    <div id="home" class="container tab-pane active"><br>
+			      <h3>HOME</h3>
+			      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			    </div>
+			    <div id="menu1" class="container tab-pane fade"><br>
+			      <h3>Menu 1</h3>
+			      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			    </div>
+			    <div id="menu2" class="container tab-pane fade"><br>
+			      <h3>Menu 2</h3>
+			      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			    </div>
+			  </div>
+		</div>
+		<div class="col-md-4">
+			<div class="row">
+				<h1 class="mda-info-title">Du lịch Singapore - Malaysia hành trình hai quốc gia khởi hành từ Hà Nội</h1>
+                    <p style="font-size: 16px; font-weight: bold; ">Hành trình: HÀ NỘI - SINGAPORE - GARDEN BY THE BAY - SENTOSA - MALACCA - KUALALUMPUR - GENTING</p>
+
+                <p class="mda-info-descriptions">Du lịch Singapore - Malaysia một hành trình hai quốc gia sẽ đưa bạn đến những điểm thú vị. Hành trình du lịch khám phá hai nước Singapore - Malaysia sẽ đưa các bạn khám phá đến hai nước phát triển hàng đầu Đông Nam Á. Singapore được ví như hòn đảo có hình dạng một viên kim cương bao quanh bởi nhiều đảo nhỏ khác, Malaysia có tòa tháp đôi cao nhất thế giới. Hãy đến với hành trình tour Singapore Malaysia để cảm nhận sự thú vị của hai đất nước xinh đẹp này.</p>
+                <div class="col-sm-6">
+                	<span>
+                                Khởi hành: <a href="https://dulichviet.com.vn/du-lich-ha-noi">Hà Nội</a>
+                            </span>
+                                                <p>Thời gian: 6 ngày 5 đêm</p>
+                        <p>Ngày khởi hành: 10/03; 10,27/04; 22/05; 05,19/06; 03,17,31/07; 14,21, 28/08, 18/09, 23/10, 20/11/2018  </p>
+                        <p>Số lượng: <input name="Number" type="number" min="1" value="1" id="quantity-tour-adult"> </p>
+                </div>
+                <div class="col-sm-6">
+                	<p>
+                                    <span class="mda-r-lb">Giá từ:</span>
+                                    <span class="mda-r-price"><span class="mda-money">12,290,000</span>đ</span>
+                                </p>
+                                <input type="hidden" id="tour-id" value="jTsHWDqrWJU%3d">
+  <p>Còn: 5 chỗ</p>                                   <p>Khởi hành: 05/06/2018 <a class="mda-day-other">Ngày khác</a></p>
+                                    <p class="mda-r-book"><a href="https://dulichviet.com.vn/thanh-toan-tour-du-lich?id=jTsHWDqrWJU%3d">ĐẶT NGAY</a> </p>
+                </div>
+
+			</div><!-- row -->
+		</div><!-- col-md-4 -->
+		
+
+	</div>	<!-- row -->
+</div><!-- div detail-tour-->
+

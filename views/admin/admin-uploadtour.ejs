@@ -1,0 +1,157 @@
+<% if(typeof message !=="undefined"){ %>
+<script>
+    $.alert({
+    title: 'Alert!',
+    content: '<%= message %>',
+    });
+</script>
+<% } %>
+<!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tours</li>
+      </ol>
+      
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Thêm tour</div>
+        <div class="card-body">
+          <div class="table-responsive p-3">
+            <form action="upload" method="post" enctype="multipart/form-data">
+      	        <div class="form-group row">
+                  <label for="matour" class="col-sm-2 col-form-label">Mã tour</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="matour" name="matour">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="tentour" class="col-sm-2 col-form-label">Tên tour</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="tentour" name="tentour">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="hanhtrinh" class="col-sm-2 col-form-label">Hành trình</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="hanhtrinh" name="hanhtrinh">
+                  </div>
+                </div>
+		            <div class="form-group row">
+                  <label for="noixp" class="col-sm-2 col-form-label">Nơi xuất phát</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="noixp" name="noixp">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay" class="col-sm-2 col-form-label">Ngày</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay" name="ngay">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="mota">Mô tả</label>
+                  <textarea class="form-control" id="mota" rows="3" name="mota"></textarea>
+                </div>
+		            <div class="form-group row">
+                  <label for="dongia" class="col-sm-2 col-form-label">Đơn giá</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="number" value="" id="dongia" name="dongia">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay1" class="col-sm-2 col-form-label">Ngày1</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay1" name="ngay1">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay2" class="col-sm-2 col-form-label">Ngày2</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay2" name="ngay2">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay3" class="col-sm-2 col-form-label">Ngày3</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay3" name="ngay3">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay4" class="col-sm-2 col-form-label">Ngày4</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay4" name="ngay4">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay5" class="col-sm-2 col-form-label">Ngày5</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay5" name="ngay5">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay6" class="col-sm-2 col-form-label">Ngày6</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay6" name="ngay6">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay7" class="col-sm-2 col-form-label">Ngày7</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" value="" id="ngay7" name="ngay7">
+                  </div>
+                </div>
+		  
+          		  <div class="form-group row">
+          		    <div class="form-group">
+                    <label for="picture1">Hình ảnh 1</label>
+                    <input type="file" class="form-control-file" id="picture1" name="picture1">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture2">Hình ảnh 2</label>
+                    <input type="file" class="form-control-file" id="picture2" name="picture2">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture3">Hình ảnh 3</label>
+                    <input type="file" class="form-control-file" id="picture3" name="picture3">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture4">Hình ảnh 4</label>
+                    <input type="file" class="form-control-file" id="picture4" name="picture4">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture5">Hình ảnh 5</label>
+                    <input type="file" class="form-control-file" id="picture5" name="picture5">
+                  </div>
+          		  </div>
+                <div class="form-group row">
+                  <label for="mucdo" class="col-sm-2">Mức độ</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="mucdo" name="mucdo">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>                  
+                <div class="form-group row">
+                  <label for="loai" class="col-sm-2">Loại</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="loai" name="loai">
+                      <option value="tn">Trong nước</option>
+                      <option value="nn">Nước ngoài</option>
+                    </select>
+                  </div>
+                </div>	 
+          		  <button type="submit" class="btn btn-primary">Thêm tour</button>
+
+            </form>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+

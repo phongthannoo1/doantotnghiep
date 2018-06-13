@@ -1,0 +1,188 @@
+<% if(typeof message !=="undefined"){ %>
+<script>
+    $.alert({
+    title: 'Alert!',
+    content: '<%= message %>',
+    });
+</script>
+<% } %>
+<!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tours</li>
+      </ol>
+      <%if(typeof detail !=="undefined"){%>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Thêm tour</div>
+        <div class="card-body">
+          <div class="table-responsive p-3">
+            <form action="http://localhost:3002/admin/edit/<%=detail.matour%>" method="post" enctype="multipart/form-data">
+      	        <div class="form-group row">
+                  <label for="matour" class="col-sm-2 col-form-label">Mã tour</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="matour" name="matour" value="<%=detail.matour%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="tentour" class="col-sm-2 col-form-label">Tên tour</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="tentour" name="tentour" value="<%=detail.tentour%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="hanhtrinh" class="col-sm-2 col-form-label">Hành trình</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="hanhtrinh" name="hanhtrinh" value="<%=detail.hanhtrinh%>">
+                  </div>
+                </div>
+		            <div class="form-group row">
+                  <label for="noixp" class="col-sm-2 col-form-label">Nơi xuất phát</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="noixp" name="noixp" value="<%=detail.noixp%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay" class="col-sm-2 col-form-label">Ngày</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay" name="ngay" value="<%=detail.ngay%>">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="mota">Mô tả</label>
+                  <textarea class="form-control" id="mota" rows="3" name="mota"><%=detail.mota%></textarea>
+                </div>
+		            <div class="form-group row">
+                  <label for="dongia" class="col-sm-2 col-form-label">Đơn giá</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="number" id="dongia" name="dongia" value="<%=detail.dongia%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay1" class="col-sm-2 col-form-label">Ngày1</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay1" name="ngay1" value="<%=detail.ngay1%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay2" class="col-sm-2 col-form-label">Ngày2</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay2" name="ngay2" value="<%=detail.ngay2%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay3" class="col-sm-2 col-form-label">Ngày3</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay3" name="ngay3" value="<%=detail.ngay3%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay4" class="col-sm-2 col-form-label">Ngày4</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay4" name="ngay4" value="<%=detail.ngay4%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay5" class="col-sm-2 col-form-label">Ngày5</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay5" name="ngay5" value="<%=detail.ngay5%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay6" class="col-sm-2 col-form-label">Ngày6</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay6" name="ngay6" value="<%=detail.ngay6%>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="ngay7" class="col-sm-2 col-form-label">Ngày7</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="ngay7" name="ngay7" value="<%=detail.ngay7%>">
+                  </div>
+                </div>
+		  
+          		  <div class="form-group row">
+          		    <div class="form-group">
+                    <label for="picture1">Hình ảnh 1</label>
+                    <input type="file" class="form-control-file" id="picture1" name="picture1">
+                    <input class="form-control" type="text" id="hinhanh1" name="hinhanh1" value="<%=detail.hinhanh1%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture2">Hình ảnh 2</label>
+                    <input type="file" class="form-control-file" id="picture2" name="picture2">
+                    <input class="form-control" type="text" id="hinhanh2" name="hinhanh2" value="<%=detail.hinhanh2%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture3">Hình ảnh 3</label>
+                    <input type="file" class="form-control-file" id="picture3" name="picture3">
+                    <input class="form-control" type="text" id="hinhanh3" name="hinhanh3" value="<%=detail.hinhanh3%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture4">Hình ảnh 4</label>
+                    <input type="file" class="form-control-file" id="picture4" name="picture4">
+                    <input class="form-control" type="text" id="hinhanh4" name="hinhanh4" value="<%=detail.hinhanh4%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="picture5">Hình ảnh 5</label>
+                    <input type="file" class="form-control-file" id="picture5" name="picture5">
+                    <input class="form-control" type="text" id="hinhanh5" name="hinhanh5" value="<%=detail.hinhanh5%>">
+                  </div>
+          		  </div>
+<!-- script hinh anh-->
+                <script>
+                    $(document).ready(function(){
+                        $('#picture1').change(function(){
+                            var realpath = 'uploads/tours/'+$('#picture1').val().slice(12);
+                            $("#hinhanh1").val(realpath);
+                        });
+                        $('#picture2').change(function(){
+                            var realpath2 = 'uploads/tours/'+$('#picture2').val().slice(12);
+                            $("#hinhanh2").val(realpath2);
+                        });
+                        $('#picture3').change(function(){
+                            var realpath3 = 'uploads/tours/'+$('#picture3').val().slice(12);
+                            $("#hinhanh3").val(realpath3);
+                        });
+                        $('#picture4').change(function(){
+                            var realpath4 = 'uploads/tours/'+$('#picture4').val().slice(12);
+                            $("#hinhanh4").val(realpath4);
+                        });
+                        $('#picture55').change(function(){
+                            var realpath5 = 'uploads/tours/'+$('#picture55').val().slice(12);
+                            $("#hinhanh55").val(realpath5);
+                        });                        
+                    });
+                </script>
+                <div class="form-group row">
+                  <label for="mucdo" class="col-sm-2">Mức độ</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="mucdo" name="mucdo">
+                      <option <%if(detail.mucdo ==="1"){%><%='selected'%><%}%> value="1">1</option>
+                      <option <%if(detail.mucdo ==="2"){%><%='selected'%><%}%> value="2">2</option>
+                      <option <%if(detail.mucdo ==="3"){%><%='selected'%><%}%> value="3">3</option>
+                    </select>
+                  </div>
+                </div>                  
+                <div class="form-group row">
+                  <label for="loai" class="col-sm-2">Loại</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="loai" name="loai">
+                      <option <%if(detail.loai.substring(0,2) ==="tn"){%><%='selected'%><%}%> value="tn">Trong nước</option>
+                      <option <%if(detail.loai.substring(0,2) ==="nn"){%><%='selected'%><%}%> value="nn">Nước ngoài</option>
+                    </select>
+                  </div>
+                </div>	 
+          		  <button type="submit" class="btn btn-primary">Sửa tour</button>
+
+            </form>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <%}%>
+

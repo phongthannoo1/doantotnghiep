@@ -1,0 +1,546 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 50px auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*quy viet*/
+#carouselExampleIndicators{  
+}
+
+.navbartop{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    width:96%;
+    z-index:10;
+    max-width:100%;
+}
+
+.navbar1 {  
+    position: absolute;
+    margin-left: 30px;
+    margin-right: 30px;    
+    margin-top: 20px;
+    line-height: 15px;
+    width:96%;
+    height: 40px;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1000;
+}
+
+.navbar1 a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown1 {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown1 .dropbtn1 {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.navbar1 a:hover, .dropdown1:hover .dropbtn1 {
+    background-color: red;    
+    height: 40px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 .header1 {
+    background: red;
+    padding: 16px;
+    color: white;
+}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+.column1 a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column1 a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*navbar be */
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.dropdown
+ {    
+    float: left;    
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {  
+    float: none;
+    color: black;
+    padding: 12px 16px;        
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+    background-color: #ddd
+}
+
+.dropdown:hover .dropbtn {
+    background-color: red;    
+    height: 40px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 96%;
+}
+
+.menu{
+  margin-bottom: 50px;
+}
+.content .rounded{
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 0 2px;
+}
+
+.mid-content{  
+      width: 100%;
+      height: 100%;
+}
+
+.mid-content img{
+      width: 100%;
+      height: 100%;
+}
+.carousel{  
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+}
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+  }
+
+/*container danh sach tour*/
+
+.col-item {
+  border: 1px solid #E1E1E1;
+  background: #FFF;
+  margin-bottom:12px;
+}
+.col-item .options {
+  position:absolute;
+  top:6px;
+  right:22px;
+}
+.col-item .photo {
+  overflow: hidden;
+}
+.col-item .photo .options {
+  display:none;
+}
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%;
+  height: 175px;
+}
+
+.col-item .options-cart {
+  position:absolute;
+  left:22px;
+  top:6px;
+  display:none;
+}
+.col-item .photo:hover .options,
+.col-item .photo:hover .options-cart {
+  display:block;
+  -webkit-animation: fadeIn .5s ease;
+  -moz-animation: fadeIn .5s ease;
+  -ms-animation: fadeIn .5s ease;
+  -o-animation: fadeIn .5s ease;
+  animation: fadeIn .5s ease;
+}
+.col-item .options-cart-round {
+  position:absolute;
+  left:42%;
+  top:22%;
+  display:none;
+}
+.col-item .options-cart-round button {
+  border-radius: 50%;
+  padding:14px 16px;
+  
+}
+.col-item .options-cart-round button .fa {
+  font-size:22px;
+}
+.col-item .photo:hover .options-cart-round {
+  display:block;
+  -webkit-animation: fadeInDown .5s ease;
+  -moz-animation: fadeInDown .5s ease;
+  -ms-animation: fadeInDown .5s ease;
+  -o-animation: fadeInDown .5s ease;
+  animation: fadeInDown .5s ease;
+}
+.col-item .info {
+  padding: 10px;
+  margin-top: 1px;
+}
+.col-item .price-details {
+  width: 100%;
+  margin-top: 5px;
+}
+.col-item .price-details h1 {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  float:left;
+}
+.col-item .price-details .details {
+  margin-bottom: 0px;
+  font-size:12px;
+}
+.col-item .price-details span {
+  float:right;
+}
+.col-item .price-details .price-new {
+  font-size:16px;
+}
+.col-item .price-details .price-old {
+  font-size:18px;
+  text-decoration:line-through;
+}
+.col-item .separator {
+  border-top: 1px solid #E1E1E1;
+}
+
+.col-item .clear-left {
+  clear: left;
+}
+.col-item .separator a {
+  text-decoration:none;
+}
+.col-item .separator p {
+  margin-bottom: 0;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.col-item .separator p i {
+  margin-right: 5px;
+}
+.col-item .btn-add {
+  width: 60%;
+  float: left;
+}
+.col-item .btn-add a {
+  display:inline-block !important;
+}
+.col-item .btn-add {
+  border-right: 1px solid #E1E1E1;
+}
+.col-item .btn-details {
+  width: 40%;
+  float: left;
+  padding-left: 10px;
+}
+.col-item .btn-details a {
+  display:inline-block !important;
+}
+.col-item .btn-details a:first-child {
+  margin-right:12px;
+}
+
+.title-tour{
+  margin-bottom: 10px;
+}
+
+.header-bot{
+  background-color: gray;
+  text-align: left;
+}
+
+.header-bot ul{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.header-bot ul li a{
+  color: white;
+  text-align: left;
+}
+
+.header-bot ul li:hover a{
+  color: red;
+}
+
+.mid-bot{
+  background-color: pink;
+}
+
+.mid-bot ul{
+  margin-left: 180px;
+  list-style: none;
+  background-color: pink;
+}
+
+.mid-bot ul li{
+  float: left;
+  width: auto;
+  border-left: 1px;
+  border-color: black;
+  margin: 3px 10px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column1 {
+        width: 100%;
+        height: auto;
+    }
+    .content{
+      width: 100%;
+    }
+}
+
+/*css hinh anh cua trang chi tiet */
+
+.detail-tour{  
+  margin-top: 100px;
+}
+
+.container-detail img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container-detail {
+  position: relative;
+}
+.container-detail .mySlides img{
+  height: 380px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+  height: 54px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row-detail:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column-detail {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* css danhsachtrongnuoc */
+.ds-tn{  
+  margin-top: 100px;
+}
+
+.text-title{
+  color: #1E90FF;
+}
+
+.text-title2{
+  color: #006400;
+}
+
+.photo2{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.photo2:hover img{
+  filter: blur(2px);
+}
+.info2{  
+    position: absolute;
+    bottom: 8px;
+    right: 16px;    
+    color: red;
+}
+
+.detail-search img{
+  height: 210px;
+}

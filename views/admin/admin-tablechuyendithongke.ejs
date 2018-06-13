@@ -1,0 +1,83 @@
+<!-- Breadcrumbs-->
+<div id="response2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Chuyến đi</li>
+      </ol>
+      
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Danh sách Chuyến đi</div>
+        <div class="card-body">
+        <label>Tháng: <input type="text" id="thang" name="thang">   Mã tour: <input type="text" id="matour" name="matour">   
+        <button id="nutbac" class="btn btn-info">Thống kê</button></label>
+        <label id="labeltongsochuyen"></label>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>ID Chuyến</th>
+                  <th>Mã tour</th>
+                  <th>Ngày xuất phát</th>
+                  <th>Số lượng</th>
+                  <th>Đã đặt</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>ID Chuyến</th>
+                  <th>Mã tour</th>
+                  <th>Ngày xuất phát</th>
+                  <th>Số lượng</th>
+                  <th>Đã đặt</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <%if(typeof nn !=="undefined"){%>
+                <%nn.forEach(function(body){%>
+                <tr>
+                  <td><%=body.idchuyen%></td>
+                  <td><%=body.matour%></td>
+                  <td><%=body.ngayxp%></td>
+                  <td><%=body.soluong%></td>
+                  <td><%=body.dadat%></td>
+                </tr>
+                <%});}%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <script>
+      $(document).ready(function(){
+
+    $("#nutbac").click(function(){
+      $.ajax({
+        url : "http://localhost:3002/admin/danhsachchuyendithongke",
+        type : "post",
+        dataType:"text",
+        data : {
+              thang : $('#thang').val(),
+             matour : $('#matour').val()
+        },
+        success : function (result){
+            $('#response2').html(result);
+        }
+      });
+    });
+});
+</script>
+
+ <script>
+
+    $(document).ready(function(){
+        $('#labeltongsochuyen').text("Tổng số chuyến: "+<%=nn.length%>);
+    });
+  </script>

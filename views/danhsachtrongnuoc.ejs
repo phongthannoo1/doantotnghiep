@@ -1,0 +1,161 @@
+<div class="danhsach px-5 mx-3 pb-3">
+	<div class="text-title"><h2>Du lịch trong nước</h2></div>
+	<p>Chương trình Du Lịch Trong Nước 2018 do S Việt Nam cung cấp với nhiều điểm du lịch mới: Du Lịch Trong Nước khởi hành từ Hà Nội; Du Lịch Trong Nước khởi hành từ Tp. Hồ Chí Minh. Dưới dây là các Tour Du Lịch Trong Nước giá tốt nhất 2018 mở bán hàng tháng với nhiều chương trình khuyến mãi: du lich Nha Trang, du lich Ha Long, du lich Sapa, du lich Con Dao, du lich Phu Quoc, du lich Da Lat, du lich Hue, du lich Da Nang, du lich Mien Tay…</p>
+<!-- chùm tour hot -->
+	<div class="danhsach">
+		<div class="row text-title2 pr-3 mb-3">
+            <div class="col-sm-12">
+                <div class="text-center border-bottom border-danger">
+                <h3 class="lb">CHÙM TOUR HOT</h3>
+                </div>
+            </div>
+    	</div>
+
+	    <div class="row">
+	        <% if(typeof detail !== "undefined") {%>
+	        <% detail.forEach(function(body) {%>
+	        <div class="col-sm-3 m-0 p-0">
+	            <article class="col-item">
+	                <div class="photo photo2">
+	                    <a href="<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+	                </div>
+	                <div class="info info2">
+	                    <div><h6><%= body.tentour.substring(0,30) %></h6></div>
+	                    <div class="row">
+	                        <div class="price-details col-md-6">
+	                            
+	                        </div>
+	                        <div class="price-details col-md-6">
+	                            <span class="price-new"><%=body.dongia %>đ</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </article>
+	        </div>
+
+	        <% });
+	        }    
+	         %>
+	        
+	    </div>
+	</div><!-- div danhsach-->
+
+<!-- chùm tour hà nội -->
+	<div class="danhsach">
+		<div class="row text-title2 pr-3 mb-3">
+            <div class="col-sm-12">
+                <div class="text-center border-bottom border-danger">
+                <h3 class="lb">CHÙM TOUR HÀ NỘI</h3>
+                </div>
+            </div>
+    	</div>
+
+	    <div class="row">
+	        <% if(typeof hn !== "undefined") {%>
+	        <% hn.forEach(function(body) {%>
+	        <div class="col-sm-3 m-0 p-0">
+	            <article class="col-item">
+	                <div class="photo photo2">
+	                    <a href="<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+	                </div>
+	                <div class="info info2">
+	                    <div><h6><%= body.tentour.substring(0,30) %></h6></div>
+	                    <div class="row">
+	                        <div class="price-details col-md-6">
+	                            
+	                        </div>
+	                        <div class="price-details col-md-6">
+	                            <span class="price-new"><%=body.dongia %>đ</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </article>
+	        </div>
+
+	        <% });
+	        }    
+	         %>
+	        
+	    </div>
+	</div><!-- div danhsach-->
+
+	<!-- chùm tour đà nẵng -->
+	<div class="danhsach">
+		<div class="row text-title2 pr-3 mb-3">
+            <div class="col-sm-12">
+                <div class="text-center border-bottom border-danger">
+                <h3 class="lb">CHÙM TOUR ĐÀ NẴNG</h3>
+                </div>
+            </div>
+    	</div>
+
+	    <div class="row">
+	        <% if(typeof dn !== "undefined") {%>
+	        <% dn.forEach(function(body) {%>
+	        <div class="col-sm-3 m-0 p-0">
+	            <article class="col-item">
+	                <div class="photo photo2">
+	                    <a href="<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+	                </div>
+	                <div class="info info2">
+	                    <div><h6><%= body.tentour.substring(0,30) %></h6></div>
+	                    <div class="row">
+	                        <div class="price-details col-md-6">
+	                            
+	                        </div>
+	                        <div class="price-details col-md-6">
+	                            <span class="price-new"><%=body.dongia %>đ</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </article>
+	        </div>
+
+	        <% });
+	        }    
+	         %>
+	        
+	    </div>
+	</div><!-- div danhsach-->
+
+
+	<!-- chùm tour huế -->
+	<div class="danhsach">
+		<div class="row text-title2 pr-3 mb-3">
+            <div class="col-sm-12">
+                <div class="text-center border-bottom border-danger">
+                <h3 class="lb">CHÙM TOUR HUẾ</h3>
+                </div>
+            </div>
+    	</div>
+
+	    <div class="row">
+	        <% if(typeof hue !== "undefined") {%>
+	        <% hue.forEach(function(body) {%>
+	        <div class="col-sm-3 m-0 p-0">
+	            <article class="col-item">
+	                <div class="photo photo2">
+	                    <a href="<%=body.tentour %>"> <img src="<%=body.hinhanh1 %>" class="img-responsive" alt="Product Image" title="<%= body.tentour %>" /> </a>
+	                </div>
+	                <div class="info info2">
+	                    <div><h6><%= body.tentour.substring(0,30) %></h6></div>
+	                    <div class="row">
+	                        <div class="price-details col-md-6">
+	                            
+	                        </div>
+	                        <div class="price-details col-md-6">
+	                            <span class="price-new"><%=body.dongia %>đ</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </article>
+	        </div>
+
+	        <% });
+	        }    
+	         %>
+	        
+	    </div>
+	</div><!-- div danhsach-->
+</div><!-- div ds-tn-->
+
